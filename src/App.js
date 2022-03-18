@@ -13,7 +13,9 @@ function App() {
             TEKSTIÄ
           </div>
           <div className="col">
-            <div id='alaosat'></div>
+            <div id='alaosat'>
+            <img src={require('./images/alaosat.jpg')} />
+            </div>
           </div>
         </div>
       </div>
