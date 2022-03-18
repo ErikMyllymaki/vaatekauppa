@@ -10,9 +10,9 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col">
-            TEKSTIÄ
+            TÄHÄN JOTAIN TEKSTIÄ
           </div>
-          <div className="col">
+          <div className="col-8">
             <div className='ylaosat'>
               <img src={require('./images/ylaosat.jpg')} />
             </div>
