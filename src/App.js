@@ -14,7 +14,10 @@ function App() {
           </div>
           <div className="col">
             <div id='alaosat'>
+            <img src={require('./images/ylaosat.jpg')} />
             <img src={require('./images/alaosat.jpg')} />
+            <img src={require('./images/kengat.jpg')} />
+            <img src={require('./images/asusteet.jpg')} />
             </div>
           </div>
         </div>
