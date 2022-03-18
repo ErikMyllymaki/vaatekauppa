@@ -9,8 +9,8 @@ function App() {
       <Navbar />
       <div className="container">
         <div className="row">
-          <div className="col">
-            TÄHÄN JOTAIN TEKSTIÄ
+          <div className="col d-flex justify-content-center">
+            <p>text</p>
           </div>
           <div className="col-8">
             <div className='ylaosat'>
