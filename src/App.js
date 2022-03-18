@@ -7,13 +7,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      <div>
-        <p>JOTAIN TEKSTIÄ</p>
-      </div>
-      <div>
-        <p>tuotekategoriakuvat</p>
-      </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
