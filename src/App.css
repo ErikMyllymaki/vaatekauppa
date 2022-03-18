@@ -1,5 +1,5 @@
 nav {
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 img {
@@ -22,6 +22,6 @@ footer {
 
 .welcome {
   font-size: xx-large;
-  padding-top: 5cm;
+  padding: 50%;
 }
 
