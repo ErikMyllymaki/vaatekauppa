@@ -10,7 +10,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col d-flex justify-content-center">
-            <p>text</p>
+            <p className='welcome pt-10'>Tervetuloa vaatekauppaan!</p>
           </div>
           <div className="col-8">
             <div className='ylaosat'>
