@@ -2,6 +2,10 @@
   background-color: aqua;
 }
 
+#alaosat {
+  background-image: url(./images/alaosat.jpg);
+}
+
 footer {
   position: fixed;
   bottom: 0;

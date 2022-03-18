@@ -6,10 +6,20 @@ import Footer from './components/Footer';
 function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            TEKSTIÄ
+          </div>
+          <div className="col">
+            <div id='alaosat'></div>
+          </div>
+        </div>
+      </div>
       <Footer />
     </>
   );
 }
 
-export default App;
+      export default App;
