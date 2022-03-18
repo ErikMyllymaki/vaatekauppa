@@ -13,11 +13,17 @@ function App() {
             TEKSTIÄ
           </div>
           <div className="col">
-            <div id='alaosat'>
-            <img src={require('./images/ylaosat.jpg')} />
-            <img src={require('./images/alaosat.jpg')} />
-            <img src={require('./images/kengat.jpg')} />
-            <img src={require('./images/asusteet.jpg')} />
+            <div className='ylaosat'>
+              <img src={require('./images/ylaosat.jpg')} />
+            </div>
+            <div className='alaosat'>
+              <img src={require('./images/alaosat.jpg')} />
+            </div>
+            <div className='kengat'>
+              <img src={require('./images/kengat.jpg')} />
+            </div>
+            <div className='asusteet'>
+              <img src={require('./images/asusteet.jpg')} />
             </div>
           </div>
         </div>
