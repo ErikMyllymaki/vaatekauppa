@@ -9,9 +9,9 @@ export default function Navbar() {
     
   return (
 
-    <div className='container-fluid juttu'>
-        <div className="row juttu">
-            <div className='text-center juttu' >
+    <div className='container-fluid juttu '>
+        <div className="row ">
+            <div className='text-center p-5' >
                 blabla
             </div>
         </div>
