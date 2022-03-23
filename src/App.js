@@ -6,7 +6,7 @@ import Alaosat from './pages/Alaosat';
 import Asusteet from './pages/Asusteet';
 import Jalkineet from './pages/Jalkineet';
 import Ylaosat from './pages/Ylaosat';
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 
 
@@ -15,7 +15,13 @@ function App() {
     <>
       <Navbar />
       <div className="container">
-        <Home />
+      <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/Alaosat' element={<Alaosat />}/>
+          <Route path='/Asusteet' element={<Asusteet/>}/>
+          <Route path='/Jalkineet' element={<Jalkineet />}/>
+          <Route path='/Ylaosat' element={<Ylaosat />}/>
+      </Routes>
       </div>
       <Footer />
     </>

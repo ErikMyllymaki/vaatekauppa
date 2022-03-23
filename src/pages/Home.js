@@ -10,16 +10,16 @@ export default function Home() {
       </div>
       <div className="col-8">
         <div className='ylaosat'>
-          <img src={require('../images/ylaosatmuokattu.jpg')} />
+          <Link to="/Ylaosat"><img src={require('../images/ylaosatmuokattu.jpg')} /></Link>
         </div>
         <div className='alaosat'>
-          <img src={require('../images/alaosatmuokattu.jpg')} />
+        <Link to="/Alaosat"><img src={require('../images/alaosatmuokattu.jpg')} /></Link>
         </div>
         <div className='kengat'>
-          <img src={require('../images/kengatmuokattu.jpg')} />
+         <Link to="/Jalkineet"><img src={require('../images/kengatmuokattu.jpg')} /></Link>
         </div>
         <div className='asusteet'>
-          <img src={require('../images/asusteetmuokattu.jpg')} />
+        <Link to="/Asusteet"><img src={require('../images/asusteetmuokattu.jpg')} /></Link>
         </div>
       </div>
     </div>
