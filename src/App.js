@@ -1,8 +1,13 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import Alaosat from './pages/Alaosat';
+import Asusteet from './pages/Asusteet';
+import Jalkineet from './pages/Jalkineet';
+import Ylaosat from './pages/Ylaosat';
+import { Routes, Route } from 'react-router-dom';
+
 
 
 function App() {
@@ -10,29 +15,17 @@ function App() {
     <>
       <Navbar />
       <div className="container">
-    <div className="row">
-      <div className="col d-flex justify-content-center">
-        <p className='welcome'>Tervetuloa vaatekauppaan!</p>
+      <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/Alaosat' element={<Alaosat />}/>
+          <Route path='/Asusteet' element={<Asusteet/>}/>
+          <Route path='/Jalkineet' element={<Jalkineet />}/>
+          <Route path='/Ylaosat' element={<Ylaosat />}/>
+      </Routes>
       </div>
-      <div className="col-8">
-        <div className='ylaosat'>
-          <img src={require('./images/ylaosatmuokattu.jpg')} />
-        </div>
-        <div className='alaosat'>
-          <img src={require('./images/alaosatmuokattu.jpg')} />
-        </div>
-        <div className='kengat'>
-          <img src={require('./images/kengatmuokattu.jpg')} />
-        </div>
-        <div className='asusteet'>
-          <img src={require('./images/asusteetmuokattu.jpg')} />
-        </div>
-      </div>
-    </div>
-  </div>
       <Footer />
     </>
   );
 }
 
-      export default App;
+export default App;
