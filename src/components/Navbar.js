@@ -19,17 +19,17 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Etusivu</a>
+                <Link className='nav-link' to="/">Etusivu</Link>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Tuotteet
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Yläosat</a></li>
-                  <li><a class="dropdown-item" href="#">Alaosat</a></li>
-                  <li><a class="dropdown-item" href="#">Kengät</a></li>
-                  <li><a class="dropdown-item" href="#">Asusteet</a></li>
+                  <li><Link className='dropdown-item' to="/Ylaosat">Yläosat</Link></li>
+                  <li><Link className='dropdown-item' to="/Alaosat">Alaosat</Link></li>
+                  <li><Link className='dropdown-item' to="/Jalkineet">kengät</Link></li>
+                  <li><Link className='dropdown-item' to="/Asusteet">Asusteet</Link></li>
                 </ul>
               </li>
             </ul>
