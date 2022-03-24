@@ -19,16 +19,18 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <a className="nav-link active" aria-current="page" href="#">Etusivu</a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Features</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Pricing</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Tuotteet
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Yläosat</a></li>
+                  <li><a class="dropdown-item" href="#">Alaosat</a></li>
+                  <li><a class="dropdown-item" href="#">Kengät</a></li>
+                  <li><a class="dropdown-item" href="#">Asusteet</a></li>
+                </ul>
               </li>
             </ul>
           </div>
