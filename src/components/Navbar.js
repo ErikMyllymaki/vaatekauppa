@@ -28,7 +28,7 @@ export default function Navbar() {
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><Link className='dropdown-item' to="/Ylaosat">Yläosat</Link></li>
                   <li><Link className='dropdown-item' to="/Alaosat">Alaosat</Link></li>
-                  <li><Link className='dropdown-item' to="/Jalkineet">kengät</Link></li>
+                  <li><Link className='dropdown-item' to="/Jalkineet">Kengät</Link></li>
                   <li><Link className='dropdown-item' to="/Asusteet">Asusteet</Link></li>
                 </ul>
               </li>
