@@ -9,10 +9,11 @@ img {
 
 .container {
   text-align: center;
+  margin-bottom: 20%;
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
