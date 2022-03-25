@@ -20,7 +20,7 @@ export default function Navbar(url) {
     <>
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid">
-          <Link className="navbar-brand" href="#">Vaatekauppa</Link>
+          <Link className="navbar-brand" to="#">Vaatekauppa</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -29,11 +29,11 @@ export default function Navbar(url) {
               <li className="nav-item">
                 <Link className='nav-link' to="/">Etusivu</Link>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Tuotteet
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   {categories.map(category => (
                     <li>
                       <Link 
