@@ -10,19 +10,18 @@ export default function Home() {
       </div>
       <div className="col-8">
         <div className='ylaosat'>
-          <Link to="/Ylaosat"><img src={require('../images/ylaosatmuokattu.jpg')} /></Link>
+          <Link to="/products/1"><img src={require('../images/ylaosatmuokattu.jpg')} /></Link>
         </div>
         <div className='alaosat'>
-        <Link to="/Alaosat"><img src={require('../images/alaosatmuokattu.jpg')} /></Link>
+        <Link to="/products/2"><img src={require('../images/alaosatmuokattu.jpg')} /></Link>
         </div>
         <div className='kengat'>
-         <Link to="/Jalkineet"><img src={require('../images/kengatmuokattu.jpg')} /></Link>
+         <Link to="/products/3"><img src={require('../images/kengatmuokattu.jpg')} /></Link>
         </div>
         <div className='asusteet'>
-        <Link to="/Asusteet"><img src={require('../images/asusteetmuokattu.jpg')} /></Link>
+        <Link to="/products/4"><img src={require('../images/asusteetmuokattu.jpg')} /></Link>
         </div>
       </div>
     </div>
-
   )
 }
