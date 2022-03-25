@@ -2,12 +2,12 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 
-export default function Jalkineet({url}) {
+export default function Jalkineet() {
 
   const [shoes,setShoes] = useState([]);
 
   useEffect(() => {
-    axios.get(url + 'products/getshoes.php')
+    axios.get('http://localhost/vaatekauppa_backend/' + 'products/getshoes.php')
       .then((response) => {
         const json = response.data;
         setShoes(json);
@@ -20,6 +20,11 @@ export default function Jalkineet({url}) {
   return (
     <div>
       <h3>Kengät</h3>
+      {shoes.map(shoe => (
+        <div key={shoe.id}>
+          {shoe.name}
+        </div>
+      ))}
     </div>
   )
 }
