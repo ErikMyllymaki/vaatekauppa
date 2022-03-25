@@ -38,7 +38,7 @@ export default function Navbar({url}) {
                   {categories.map(category => (
                     <li key={category.id}>
                       <Link 
-                      className='dropdown-item' to={'/products/' + category.id}>{category.nimi}
+                      className='dropdown-item' to={'/products/' + category.id}>{category.name}
                       </Link>
                     </li>
                   ))}
