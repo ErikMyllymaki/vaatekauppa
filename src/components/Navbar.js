@@ -2,7 +2,7 @@ import axios from 'axios';
 import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
 
-export default function Navbar(url) {
+export default function Navbar({url}) {
   const [categories,setCategories] = useState([]);
 
   useEffect(() => {
@@ -10,6 +10,7 @@ export default function Navbar(url) {
       .then((response) => {
         const json = response.data;
         setCategories(json);
+        console.log(json)
       }).catch (error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
