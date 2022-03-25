@@ -10,7 +10,7 @@ export default function Navbar({url}) {
       .then((response) => {
         const json = response.data;
         setCategories(json);
-        console.log(json);
+        console.log(json)
       }).catch (error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
