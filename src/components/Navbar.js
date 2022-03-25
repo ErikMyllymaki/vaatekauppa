@@ -29,11 +29,11 @@ export default function Navbar(url) {
               <li className="nav-item">
                 <Link className='nav-link' to="/">Etusivu</Link>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Tuotteet
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   {categories.map(category => (
                     <li>
                       <Link 
