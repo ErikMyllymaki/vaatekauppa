@@ -10,6 +10,7 @@ export default function Navbar({url}) {
       .then((response) => {
         const json = response.data;
         setCategories(json);
+        console.log(json);
       }).catch (error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
@@ -35,9 +36,9 @@ export default function Navbar({url}) {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   {categories.map(category => (
-                    <li>
+                    <li key={category.id}>
                       <Link 
-                      className='dropdown-item' to={'/products/' + category.id}>{category.name}
+                      className='dropdown-item' to={'/products/' + category.id}>{category.nimi}
                       </Link>
                     </li>
                   ))}
