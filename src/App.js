@@ -8,12 +8,12 @@ import Jalkineet from './pages/Jalkineet';
 import Ylaosat from './pages/Ylaosat';
 import { Routes, Route } from 'react-router-dom';
 
-
+const URL = 'http://localhost/vaatekauppa_backend/';
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar url={URL}/>
       <div className="container">
       <Routes>
           <Route path='/' element={<Home />}/>
