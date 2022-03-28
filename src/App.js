@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
+import Order from './pages/Order';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -31,6 +32,7 @@ function App() {
       <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/Products/:categoryId' element={<Products url={URL} addToCart={addToCart}/>}/>
+          <Route path='/order' element={<Order cart={cart} />}/>
       </Routes>
       </div>
       <Footer />
