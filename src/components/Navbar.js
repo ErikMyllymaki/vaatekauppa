@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
+import Cart from './Cart';
 
-export default function Navbar({url}) {
+export default function Navbar({url,cart}) {
   const [categories,setCategories] = useState([]);
 
   useEffect(() => {
@@ -43,6 +44,11 @@ export default function Navbar({url}) {
                     </li>
                   ))}
                 </ul>
+              </li>
+            </ul>
+            <ul className='navbar-nav ml-auto'>
+              <li className='nav-item'>
+                <Cart cart={cart} />
               </li>
             </ul>
           </div>
