@@ -13,7 +13,6 @@ nav {
 }
 
 img {
-  width: 450px;
   padding: 4px;
 }
 
@@ -23,8 +22,8 @@ img {
 
 .image {
   opacity: 1;
-  display: block;
-  width: 100%;
+  /* display: block; */
+  width: 450px;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -34,10 +33,10 @@ img {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 225px;
+  left: 430px;
+  transform: translate(-225px, -225px);
+  -ms-transform: translate(-225px, -225px);
   text-align: center;
 }
 
@@ -52,7 +51,7 @@ img {
 .text {
   color: black;
   font-size: 30px;
-  padding: 16px 32px;
+  padding: 52px 0px 0px 165px;
 }
 
 .container {
