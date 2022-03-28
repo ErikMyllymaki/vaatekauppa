@@ -22,7 +22,7 @@ export default function Products({url}) {
 
   return (
     <div>
-      <h3>Category {categoryName}</h3>
+      <h3>{categoryName}</h3>
       {products.map(product => (
         <div key={product.id}>
           {product.name}
