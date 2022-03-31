@@ -1,6 +1,7 @@
 import React from 'react';
 import uuid from 'react-uuid';
 import App from '../App';
+import removeFromCart from '../App'
 
 export default function Order({cart}) {
     let sum = 0;
