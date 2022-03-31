@@ -20,7 +20,7 @@ export default function Order({cart,removeFromCart,updateAmount}) {
         }
       }, [cart])
 
-    function changeAmount(e,product) {
+    function changeAmount(e,product,index) {
         updateAmount(e.target.value,product);
         setInputIndex(index);
     }
