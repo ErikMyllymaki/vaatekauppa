@@ -27,12 +27,7 @@ function App() {
     }
   }, [cart.length])
 
-  // tää kans
-  useEffect(() => {
-    if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
-      inputs[inputIndex].current.focus();
-    }
-  }, [cart])
+  
   
 
   function addToCart(product) {

@@ -6,6 +6,13 @@ import { useState } from 'react';
 import updateAmountfrom from '../App';
 
 export default function Order({cart,removeFromCart,updateAmount}) {
+
+    useEffect(() => {
+        if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
+          inputs[inputIndex].current.focus();
+        }
+      }, [cart])
+    
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
 
@@ -13,6 +20,7 @@ export default function Order({cart,removeFromCart,updateAmount}) {
 
     function changeAmount(e,product) {
         updateAmount(e.target.value,product);
+        setInputIndex(index);
     }
 
   return (
