@@ -6,6 +6,7 @@ import Products from './pages/Products';
 import Order from './pages/Order';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import Header from './components/Header';
 
 const URL = 'http://localhost/vaatekauppa_backend/';
 
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Navbar url={URL} cart={cart}/>
       <div className="container">
       <Routes>
