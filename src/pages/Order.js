@@ -7,8 +7,8 @@ export default function Order({cart}) {
     let sum = 0;
   return (
     <div>
-        <h3 className='header'>Items in cart</h3>
-        <table className='table'></table>
+        <h3 className=''>Items in cart</h3>
+        <table className='table'>
         <tbody>
             {cart.map(product => {
                 sum+=parseFloat(product.price);
@@ -21,6 +21,7 @@ export default function Order({cart}) {
                 )
             })}
         </tbody>
+        </table>
     </div>
   )
 }
