@@ -18,16 +18,6 @@ function App() {
       setCart(JSON.parse(localStorage.getItem('cart')));
     }
   }, [])
-
-
-  // Onko oikeessa paikassa?? app.js tai order.js
-  useEffect(() => {
-    for (let i = 0;i<cart.length;i++) {
-      inputs[i] = createRef();
-    }
-  }, [cart.length])
-
-  
   
 
   function addToCart(product) {

@@ -15,6 +15,12 @@ export default function Order({cart,removeFromCart,updateAmount}) {
     let sum = 0;
 
     useEffect(() => {
+        for (let i = 0;i<cart.length;i++) {
+          inputs[i] = createRef();
+        }
+      }, [cart.length])
+    
+    useEffect(() => {
         if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
           inputs[inputIndex].current.focus();
         }
