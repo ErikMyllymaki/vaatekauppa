@@ -3,7 +3,7 @@ import uuid from 'react-uuid';
 import App from '../App';
 import removeFromCart from '../App';
 import { useState, useEffect } from 'react';
-import updateAmountfrom from '../App';
+import updateAmount from '../App';
 
 
 export default function Order({cart,removeFromCart,updateAmount}) {
