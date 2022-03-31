@@ -52,7 +52,7 @@ export default function Order({cart,removeFromCart,updateAmount}) {
             })}
             <tr key={uuid()}>
                 <td></td>
-                <td>{sum.toFixed(2)} €</td>
+                <td>Yhteishinta: {sum.toFixed(2)} €</td>
                 <td></td>
                 <td></td>
             </tr>
