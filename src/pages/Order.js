@@ -2,21 +2,23 @@ import React from 'react';
 import uuid from 'react-uuid';
 import App from '../App';
 import removeFromCart from '../App';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import updateAmountfrom from '../App';
 
+
 export default function Order({cart,removeFromCart,updateAmount}) {
+
+    
+    const [inputs,_] = useState([]);
+    const [inputIndex, setInputIndex] = useState(-1);
+
+    let sum = 0;
 
     useEffect(() => {
         if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
           inputs[inputIndex].current.focus();
         }
       }, [cart])
-    
-    const [inputs,_] = useState([]);
-    const [inputIndex, setInputIndex] = useState(-1);
-
-    let sum = 0;
 
     function changeAmount(e,product) {
         updateAmount(e.target.value,product);
