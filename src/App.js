@@ -18,13 +18,33 @@ function App() {
       setCart(JSON.parse(localStorage.getItem('cart')));
     }
   }, [])
+
+
+  // Onko oikeessa paikassa?? app.js tai order.js
+  useEffect(() => {
+    for (let i = 0;i<cart.length;i++) {
+      inputs[i] = createRef();
+    }
+  }, [cart.length])
+
+  // tää kans
+  useEffect(() => {
+    if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
+      inputs[inputIndex].current.focus();
+    }
+  }, [cart])
   
 
   function addToCart(product) {
+    if(cart.some(item => item.id === product.id)) {
+      const existingProduct = cart.filter(item => item.id === product.id);
+      updateAmount(parseInt(existingProduct[0].amount) +1,product);
+    } else {
     product['amount'] = 1;
     const newCart =[...cart,product];
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
+    }
   }
 
   function removeFromCart(product) {
