@@ -16,10 +16,19 @@ export default function Order({cart}) {
                     <tr key={uuid()}>
                         <td>{product.name}</td>
                         <td>{product.price} €</td>
+                        <td>
+                            <input style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product)} />
+                        </td>
                         <td><a href='#' onClick={() => removeFromCart(product)}>Delete</a></td>
                     </tr>
                 )
             })}
+            <tr key={uuid()}>
+                <td></td>
+                <td>{sum.toFixed(2)} €</td>
+                <td></td>
+                <td></td>
+            </tr>
         </tbody>
         </table>
     </div>
