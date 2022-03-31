@@ -80,4 +80,11 @@ footer {
   font-family: 'Lora', serif;
 }
 
+.header {
+  background-color: rgb(247, 247, 247);
+  padding: 30px;
+  text-align: center;
+  border-bottom: grey solid 1px;
+}
+
 
