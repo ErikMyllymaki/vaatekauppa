@@ -60,7 +60,7 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
                 <td>{product.name}</td>
                 <td>{product.price} €</td>
                 <td>
-                  <input type="number" ref={inputs[index]} style={{ width: '60px' }} value={product.amount} onChange={e => changeAmount(e, product)} />
+                  <input type="number" min="0" ref={inputs[index]} style={{ width: '60px' }} value={product.amount} onChange={e => changeAmount(e, product)} />
                 </td>
                 <td><a href='#' onClick={() => removeFromCart(product)}>Delete</a></td>
               </tr>
