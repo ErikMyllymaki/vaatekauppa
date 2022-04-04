@@ -50,17 +50,17 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
 
   return (
     <div>
-      <h3 className=''>Items in cart</h3>
+      <h3 className=''>Ostoskori</h3>
       <table className='table'>
         <tbody>
           {cart.map((product, index) => {
-            sum += parseFloat(product.price);
+            sum += parseFloat(product.price * product.amount);
             return (
               <tr key={uuid()}>
                 <td>{product.name}</td>
                 <td>{product.price} €</td>
                 <td>
-                  <input type="number" ref={inputs[index]} style={{ width: '60px' }} value={product.amount} onChange={e => changeAmount(e, product)} />
+                  <input type="number" min="0" ref={inputs[index]} style={{ width: '60px' }} value={product.amount} onChange={e => changeAmount(e, product)} />
                 </td>
                 <td><a href='#' onClick={() => removeFromCart(product)}>Delete</a></td>
               </tr>
