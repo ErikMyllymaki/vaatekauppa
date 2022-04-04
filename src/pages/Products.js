@@ -8,21 +8,7 @@ export default function Products({ url, addToCart }) {
   const [products, setProducts] = useState([]);
 
   let params = useParams();
-
-  // function ShowProducts(juttu) {
-  //   useEffect(() => {
-  //     axios.get(url + 'products/getproducts.php/' + params.categoryId + '/' + params.juttu)
-  //       .then((response) => {
-  //         const json = response.data;
-  //         setCategoryName(json.category);
-  //         setProducts(json.products);
-  //       }).catch(error => {
-  //         alert(error.response === undefined ? error : error.response.data.error);
-  //       })
-  //   }, [params])
-  // }
-
-
+  
      useEffect(() => {
       axios.get(url + 'products/getproducts.php/' + params.categoryId + '/' + params.gender)
         .then((response) => {
@@ -33,10 +19,6 @@ export default function Products({ url, addToCart }) {
           alert(error.response === undefined ? error : error.response.data.error);
         })
     }, [params])
-
-
-
-
 
 
   return (
