@@ -42,8 +42,14 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
         <td></td>
       </tr>
     )} else {
-      return <p>Ostoskorissa ei ole tuotteita.</p>
-    }
+      return (
+      <tr>
+        <td></td>
+        <td>Ostoskorissa ei ole tuotteita.</td>
+        <td></td>
+        <td></td>
+      </tr>   
+       )}
     
  
   }
