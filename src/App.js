@@ -53,7 +53,8 @@ function App() {
       <div className="container">
       <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='/Products/:categoryId' element={<Products url={URL} addToCart={addToCart}/>}/>
+          <Route path='/Products/:categoryId/' element={<Products url={URL} addToCart={addToCart}/>}/>
+          <Route path='/Products/:categoryId/:gender' element={<Products url={URL} addToCart={addToCart}/>}/>
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
       </Routes>
       </div>
