@@ -46,7 +46,6 @@ export default function Products({ url, addToCart }) {
           <Link to={'/products/' + params.categoryId + '/M'}>Miesten tuotteet</Link>
           <Link to={'/products/' + params.categoryId + '/N'}>Naisten tuotteet</Link>
       </div>
-      {/* {(ShowProducts(document.getElementById('gender').value))} */}
       <h3>{categoryName}</h3>
       {products.map(product => (
         <div key={product.id}>
