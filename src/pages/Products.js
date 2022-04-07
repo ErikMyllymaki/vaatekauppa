@@ -30,6 +30,9 @@ export default function Products({ url, addToCart }) {
       <h3>{categoryName}</h3>
       {products.map(product => (
         <div key={product.id}>
+          <div>
+            <img src={url + 'images/' + product.image} alt="tuotekuva" style={{width: '200px'}}/>
+          </div>
           {product.name}
           <button className='btn btn-primary' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
           <Link to={'/products/' + params.categoryId + '/' + product.id}>
