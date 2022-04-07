@@ -20,7 +20,6 @@ export default function Products({ url, addToCart }) {
         })
     }, [params])
 
-
   return (
     <div>
       <div>
@@ -33,6 +32,9 @@ export default function Products({ url, addToCart }) {
         <div key={product.id}>
           {product.name}
           <button className='btn btn-primary' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
+          <Link to={'/products/' + params.categoryId + '/' + product.id}>
+            <button className='btn btn-primary' type='button'>Näytä</button>
+          </Link>
         </div>
       ))}
     </div>
