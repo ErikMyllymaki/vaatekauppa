@@ -1,10 +1,10 @@
 import axios from 'axios';
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
 
-export default function Navbar({url,cart}) {
-  const [categories,setCategories] = useState([]);
+export default function Navbar({ url, cart }) {
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     axios.get(url + 'products/getcategories.php')
@@ -12,11 +12,11 @@ export default function Navbar({url,cart}) {
         const json = response.data;
         setCategories(json);
         console.log(json)
-      }).catch (error => {
+      }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
   }, [])
-  
+
 
   return (
     <>
@@ -38,12 +38,15 @@ export default function Navbar({url,cart}) {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   {categories.map(category => (
                     <li key={category.id}>
-                      <Link 
-                      className='dropdown-item' to={'/products/' + category.id}>{category.name}
+                      <Link
+                        className='dropdown-item' to={'/products/' + category.id}>{category.name}
                       </Link>
                     </li>
                   ))}
                 </ul>
+              </li>
+              <li className="nav-item">
+                <Link className='nav-link' to="/addcategories">Ylläpito</Link>
               </li>
             </ul>
             <ul className='navbar-nav ml-auto'>
