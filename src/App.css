@@ -106,6 +106,17 @@ footer {
   display: auto;
 }
 
+button {
+  background-color: white;
+  border: 1px solid black;
+  padding: 6px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: rgb(247, 247, 247);
+}
+
 
 @media screen and (max-width: 992px) {
 
