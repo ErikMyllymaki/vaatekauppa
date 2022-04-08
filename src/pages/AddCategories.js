@@ -27,7 +27,7 @@ export default function AddCategories({ url }) {
       }).catch(error => {
         alert(error.response ? error.response.error : error)
       })
-      window.location.reload(false);
+
   }
 
   return (
