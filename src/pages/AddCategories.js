@@ -1,11 +1,12 @@
 import React from 'react'
-import { useState } from 'react';
-import { axios } from 'axios';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export default function AddCategories({ url }) {
 
   const [category, setCategory] = useState('');
   const [categories, setCategories] = useState([]);
+
 
 
   function addCategory(e) {
@@ -21,7 +22,7 @@ export default function AddCategories({ url }) {
 
 
         setCategories(categories => [...categories, response.data])
-        console.log(categories)
+        console.log(json)
         setCategory('')
       }).catch(error => {
         alert(error.response ? error.response.error : error)
