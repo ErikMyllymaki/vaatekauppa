@@ -18,7 +18,7 @@ img {
 
 .container_img {
   position: relative;
-  width: 80%;
+  width: 100%;
 }
 
 .image {
@@ -78,8 +78,7 @@ footer {
 }
 
 .welcome {
-  font-size: xx-large;
-  padding: 40% 60% 60% 40%;
+  font-size: 2em;
   font-family: 'Lora', serif;
 }
 
@@ -121,14 +120,41 @@ button:hover {
 @media screen and (max-width: 992px) {
 
   .container_img {
+    width: 100%
+  }
+
+
+  .welcome {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+ 
+}
+
+@media screen and (min-width: 992px) {
+
+ .welcome {
+   margin-top: 50%;
+   margin-bottom: 50%;
+ }
+
+ 
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .product_image_bigger {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 992px) {
-
-  .container_img {
-    width: 100%;
+@media screen and (max-width: 300px) {
+  .welcome {
+    font-size: 1.5em;
   }
 }
+
+  
+
 
