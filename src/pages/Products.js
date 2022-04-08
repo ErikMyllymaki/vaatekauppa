@@ -7,8 +7,6 @@ export default function Products({ url, addToCart }) {
   const [categoryName, setCategoryName] = useState('');
   const [products, setProducts] = useState([]);
   const [active, setActive] = useState(false);
-  const [active1, setActive1] = useState(false);
-
   let params = useParams();
   
      useEffect(() => {
