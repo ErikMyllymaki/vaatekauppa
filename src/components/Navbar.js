@@ -45,6 +45,9 @@ export default function Navbar({ url, cart }) {
                 </ul>
               </li>
               <li className="nav-item">
+                <Link className='nav-link' to="/ContactUs">Ota yhteyttä</Link>
+              </li>
+              <li className="nav-item">
                 <Link className='nav-link' to="/addcategories">Ylläpito</Link>
               </li>
             </ul>

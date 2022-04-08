@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import AddCategories from './pages/AddCategories';
+import ContactUs from './pages/ContactUs';
 
 
 const URL = 'http://localhost/vaatekauppa_backend/';
@@ -59,6 +60,7 @@ function App() {
           <Route path='/Products/:categoryId/:gender' element={<Products url={URL} addToCart={addToCart}/>}/>
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
           <Route path="/AddCategories" element={<AddCategories url={URL} />} />
+          <Route path='/ContactUs' element={<ContactUs />} />
       </Routes>
       </div>
       <Footer />
