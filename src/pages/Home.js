@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 export default function Home() {
   return (
     <div className="row">
-      <div className="col d-flex justify-content-center">
+      <div className="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center">
         <p className='welcome'>Tervetuloa vaatekauppaan!</p>
       </div>
-      <div className="col-6">
+      <div className="col-lg-6 col-md-12 col-sm-12">
         <div className='container_img'>
           <Link to="/products/1"><img src={require('../images/ylaosatmuokattu.jpg')} className='image' /></Link>
           <div className='middle'>

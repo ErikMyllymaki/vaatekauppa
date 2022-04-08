@@ -34,9 +34,9 @@ export default function Products({ url, addToCart }) {
   return (
     <div>
       <div>
-          <Link to={'/products/' + params.categoryId}>Kaikki tuotteet</Link>
-          <Link to={'/products/' + params.categoryId + '/M'}>Miesten tuotteet</Link>
-          <Link to={'/products/' + params.categoryId + '/N'}>Naisten tuotteet</Link>
+          <Link to={'/products/' + params.categoryId}><button>Kaikki</button></Link>
+          <Link to={'/products/' + params.categoryId + '/M'}><button>Miehille</button></Link>
+          <Link to={'/products/' + params.categoryId + '/N'}><button>Naisille</button></Link>
       </div>
       <h3>{categoryName}</h3>
       {products.map(product => (
