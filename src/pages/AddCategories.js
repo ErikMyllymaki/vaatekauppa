@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { axios } from 'axios';
 
-export default function AddCategories({url}) {
+export default function AddCategories({ url }) {
 
   const [category, setCategory] = useState('');
   const [categories, setCategories] = useState([]);
@@ -12,8 +12,6 @@ export default function AddCategories({url}) {
     e.preventDefault();
     const json = JSON.stringify({name: category})
 
-    console.log(category)
-
     axios.post(url + 'products/addcategories.php', json, {
       headers: {
         'Content-Type': 'application/json'
@@ -21,7 +19,9 @@ export default function AddCategories({url}) {
     })
       .then((response) => {
 
+
         setCategories(categories => [...categories, response.data])
+        console.log(categories)
         setCategory('')
       }).catch(error => {
         alert(error.response ? error.response.error : error)
