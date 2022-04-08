@@ -90,6 +90,22 @@ footer {
   border-bottom: grey solid 1px;
 }
 
+.product_image {
+  width: 200px;
+}
+
+.product_image_bigger {
+  width: 450px;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: auto;
+}
+
 
 @media screen and (max-width: 992px) {
 
