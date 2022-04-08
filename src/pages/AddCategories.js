@@ -12,6 +12,8 @@ export default function AddCategories({url}) {
     e.preventDefault();
     const json = JSON.stringify({name: category})
 
+    console.log(category)
+
     axios.post(url + 'products/addcategories.php', json, {
       headers: {
         'Content-Type': 'application/json'
@@ -31,8 +33,8 @@ export default function AddCategories({url}) {
       <form onSubmit={addCategory}>
         <h4>Lisää kategoria</h4>
         <label htmlFor="categoryName">Kategorianimi</label>
-        <input type="text" name="categoryName" id="categoryName"></input>
-        <button type="submit" value={category} onChange={e => setCategories(e.target.value)} className="">Lisää kategorioita</button>
+        <input value={category} onChange={e => setCategory(e.target.value)} type="text" name="categoryName" id="categoryName"></input>
+        <button type="submit" className="">Lisää kategorioita</button>
       </form>
     </>
   )
