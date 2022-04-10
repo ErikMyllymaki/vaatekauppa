@@ -21,6 +21,23 @@ img {
   width: 100%;
 }
 
+/*Tuoteryhmien otsikot */
+.categoryName {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+/* Ota yhteyttä- ja ylläpito-sivujen otsikot */
+.contactUs, .addCategory {
+  padding-bottom: 20px;
+}
+
+/* tuotteiden divit */
+.productDiv {
+  padding-bottom: 50px;
+  /*display: inline-block;*/
+}
+
 .image {
   opacity: 1;
   display: block;
@@ -49,7 +66,8 @@ img {
   opacity: 1;
 }
 
-.text, .text:hover {
+.text,
+.text:hover {
   text-decoration: none;
   background-color: none;
   color: black;
@@ -59,10 +77,11 @@ img {
 
 .container {
   text-align: center;
-  min-height: 1000px;  
+  min-height: 1000px;
 }
 
-#email, #name {
+#email,
+#name {
   width: 285px;
 }
 
@@ -132,17 +151,17 @@ button:hover {
     margin-top: 3em;
     margin-bottom: 3em;
   }
- 
+
 }
 
 @media screen and (min-width: 992px) {
 
- .welcome {
-   margin-top: 50%;
-   margin-bottom: 50%;
- }
+  .welcome {
+    margin-top: 50%;
+    margin-bottom: 50%;
+  }
 
- 
+
 }
 
 
@@ -158,7 +177,3 @@ button:hover {
     font-size: 1.5em;
   }
 }
-
-  
-
-

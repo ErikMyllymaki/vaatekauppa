@@ -38,9 +38,9 @@ export default function Products({ url, addToCart }) {
           <Link to={'/products/' + params.categoryId + '/M'}><button>Miehille</button></Link>
           <Link to={'/products/' + params.categoryId + '/N'}><button>Naisille</button></Link>
       </div>
-      <h3>{categoryName}</h3>
+      <h3 className='categoryName'>{categoryName}</h3>
       {products.map(product => (
-        <div key={product.id}>
+        <div key={product.id} className='productDiv'>
           <div>
             <img className={active ? 'product_image_bigger' : 'product_image'} src={url + 'images/' + product.image} alt="tuotekuva"/>
           </div>

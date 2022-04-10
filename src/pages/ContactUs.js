@@ -37,7 +37,7 @@ export default function ContactUs( {url} ) {
     
     return (
             <div>
-                <h2>Ota yhteyttä</h2>
+                <h3 className="contactUs">Ota yhteyttä</h3>
                 <form onSubmit={sendMessage}>
                     <label for="name">Nimi:</label><br/>
                     <input value={name} onChange={e => setName(e.target.value)} type="text" name="name" id="name" placeholder="Nimi" required /><br/>
