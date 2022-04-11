@@ -7,10 +7,11 @@ export default function Products({ url, addToCart }) {
   const [categoryName, setCategoryName] = useState('');
   const [products, setProducts] = useState([]);
   const [active, setActive] = useState(false);
+  const [price, setPrice] = useState(0)
   let params = useParams();
   
      useEffect(() => {
-      axios.get(url + 'products/getproducts.php/' + params.categoryId + '/' + params.gender)
+      axios.get(url + 'products/getproducts.php/' + params.categoryId + '/' + params.gender + '/' + params.price)
         .then((response) => {
           const json = response.data;
           setCategoryName(json.category);
@@ -34,17 +35,23 @@ export default function Products({ url, addToCart }) {
   return (
     <div>
       <div>
-          <Link to={'/products/' + params.categoryId}><button>Kaikki</button></Link>
+          <Link to={'/products/' + params.categoryId + '/0'}><button>Kaikki</button></Link>
           <Link to={'/products/' + params.categoryId + '/M'}><button>Miehille</button></Link>
           <Link to={'/products/' + params.categoryId + '/N'}><button>Naisille</button></Link>
       </div>
+      <div>
+      <label htmlFor="maxPrice">Max hinta:</label>
+          <input value={price} onChange={e => setPrice(e.target.value)} className='maxPrice' type="number" placeholder='Tuotteen maksimihinta €'/>
+      </div>
+      <Link to={'/products/' + params.categoryId + '/' + params.gender + '/' + price}><button>Hae</button></Link>
       <h3 className='categoryName'>{categoryName}</h3>
       {products.map(product => (
         <div key={product.id} className='productDiv'>
           <div>
             <img className={active ? 'product_image_bigger' : 'product_image'} src={url + 'images/' + product.image} alt="tuotekuva"/>
           </div>
-          {product.name}
+          {product.name}&nbsp;
+          {product.price}€
           <button className='' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
           <Link to={'/products/' + params.categoryId + '/' + product.id}>
             <button className={active ? 'hidden' : 'shown'} type='button' onClick={() => setActive(!active)}>Näytä</button>
