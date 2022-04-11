@@ -21,7 +21,7 @@ export default function Navbar({ url, cart }) {
     <>
       <nav className="navbar navbar-expand-sm navbar-light">
     <div className="mx-auto d-sm-flex d-block flex-sm-nowrap">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse text-center" id="navbarsExample11">
