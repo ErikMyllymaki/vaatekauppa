@@ -35,8 +35,8 @@ export default function Products({ url, addToCart }) {
     <div>
       <div>
           <Link to={'/products/' + params.categoryId}><button>Kaikki</button></Link>
-          <Link to={'/products/' + params.categoryId + '/M'}><button>Miehille</button></Link>
-          <Link to={'/products/' + params.categoryId + '/N'}><button>Naisille</button></Link>
+          <Link to={'/products/' + params.categoryId + '/M'}><button>Miehet</button></Link>
+          <Link to={'/products/' + params.categoryId + '/N'}><button>Naiset</button></Link>
       </div>
       <h3 className='categoryName'>{categoryName}</h3>
       {products.map(product => (
