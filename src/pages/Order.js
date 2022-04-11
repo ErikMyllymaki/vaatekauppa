@@ -12,6 +12,12 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
 
   const [inputs, _] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1);
+  const [firstname, setFirstname] = useState('')
+  const [lastname, setLastname] = useState('')
+  const [address, setAddress] = useState('')
+  const [zip, setZip] = useState('')
+  const [city, setCity] = useState('')
+
 
   let sum = 0;
 
@@ -19,6 +25,7 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
     for (let i = 0; i < cart.length; i++) {
       inputs[i] = createRef();
     }
+
   }, [cart.length])
 
   useEffect(() => {
@@ -31,6 +38,20 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
     updateAmount(e.target.value, product);
     setInputIndex(index);
   }
+
+  // function order(e) {
+  //   e.preventDefault();
+
+    // const json = JSON.stringify({
+    //   firstname: firstname,
+    //   lastname: lastname,
+    //   address: address,
+    //   zip: zip,
+    //   city: city,
+    //   cart: cart
+    // })
+    // console.log(json.cart)
+  // }
 
   function showTotalPrice(sum) {
     if (sum > 0) {
