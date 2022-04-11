@@ -32,6 +32,11 @@ img {
   padding-bottom: 20px;
 }
 
+/* Ostoskorin teksti, kun se on tyhjä
+.emptyCartText {
+ MÄÄRITYKSET EI TOIMI SIIHEN !!??
+} */
+
 /* tuotteiden divit */
 .productDiv {
   padding-bottom: 50px;
