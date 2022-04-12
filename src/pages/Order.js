@@ -5,9 +5,10 @@ import removeFromCart from '../App';
 import { useState, useEffect } from 'react';
 import updateAmount from '../App';
 import { createRef } from 'react';
+import axios from 'axios';
 
 
-export default function Order({ cart, removeFromCart, updateAmount }) {
+export default function Order({ cart, removeFromCart, updateAmount, url }) {
 
 
   const [inputs, _] = useState([]);
@@ -17,6 +18,7 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
   const [address, setAddress] = useState('')
   const [zip, setZip] = useState('')
   const [city, setCity] = useState('')
+  const [finished, setFinished] = useState(false)
 
 
   let sum = 0;
@@ -48,9 +50,21 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
       address: address,
       zip: zip,
       city: city,
-      cart: cart
-    })
+      cart: cart,
+    });
     console.log(json.cart)
+    axios.post(url + 'order/save.php',json, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type' : 'application/json'
+      }
+    })
+    .then(() => {
+      //empty();
+      setFinished(true);
+    }).catch(error => {
+      alert(error.response === undefined ? error : error.response.data.error);
+    })
   }
 
   function showTotalPrice(sum) {
@@ -97,7 +111,7 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
         </tbody>
       </table>
       <h3>Client information</h3>
-      <form onSubmit="">{order}
+      <form onSubmit={order}>
         <div className="form-group">
           <label htmlFor="">Etunimi:</label>
           <input className="form-control" onChange={e => setFirstname(e.target.value)} />
@@ -116,7 +130,7 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
         </div>
         <div className="form-group">
           <label htmlFor="">Postitoimipaikka</label>
-          <input className="form-control" onChange={e => setFirstname(e.target.value)} />
+          <input className="form-control" onChange={e => setCity(e.target.value)} />
         </div>
         <div className="buttons">
           <button className='btn btn-primary'>Order</button>
