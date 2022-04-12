@@ -59,7 +59,7 @@ function App() {
           <Route path='/Products/:categoryId/' element={<Products url={URL} addToCart={addToCart}/>}/>
           <Route path='/Products/:categoryId/:gender' element={<Products url={URL} addToCart={addToCart}/>}/>
           <Route path='/Products/:categoryId/:gender/:price' element={<Products url={URL} addToCart={addToCart}/>}/>
-          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
+          <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
           <Route path="/AddCategories" element={<AddCategories url={URL} />} />
           <Route path='/ContactUs' element={<ContactUs url={URL}/>} />
       </Routes>
