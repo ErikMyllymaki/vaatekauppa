@@ -47,7 +47,7 @@ export default function Products({ url, addToCart }) {
       <h3 className='categoryName'>{categoryName}</h3>
       <div className='row'>
       {products.map(product => (
-        <div key={product.id} className='productDiv col-md-4 col-sm-6'>
+        <div key={product.id} className={active ? 'col-12' : 'productDiv col-md-4 col-sm-6'}>
           <div>
             <img className={active ? 'product_image_bigger' : 'product_image'} src={url + 'images/' + product.image} alt="tuotekuva"/>
           </div>
