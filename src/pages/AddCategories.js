@@ -33,10 +33,10 @@ export default function AddCategories({ url }) {
   return (
     <>
       <form className='container' onSubmit={addCategory}>
-        <h4 className='addCategory'>Lisää kategoria</h4>
-        <label htmlFor="categoryName">Kategorianimi</label>
-        <input value={category} onChange={e => setCategory(e.target.value)} type="text" name="categoryName" id="categoryName"></input>
-        <button type="submit" className="">Lisää kategorioita</button>
+        <h4 className='addCategory'>Lisää uusi kategoria</h4>
+        <label htmlFor="categoryName">Kategorianimi</label><br/>
+        <input value={category} onChange={e => setCategory(e.target.value)} type="text" name="categoryName" id="categoryName"></input><br/>
+        <button type="submit" className="">Lisää</button>
       </form>
     </>
   )
