@@ -39,19 +39,19 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
     setInputIndex(index);
   }
 
-  // function order(e) {
-  //   e.preventDefault();
+  function order(e) {
+    e.preventDefault();
 
-    // const json = JSON.stringify({
-    //   firstname: firstname,
-    //   lastname: lastname,
-    //   address: address,
-    //   zip: zip,
-    //   city: city,
-    //   cart: cart
-    // })
-    // console.log(json.cart)
-  // }
+    const json = JSON.stringify({
+      firstname: firstname,
+      lastname: lastname,
+      address: address,
+      zip: zip,
+      city: city,
+      cart: cart
+    })
+    console.log(json.cart)
+  }
 
   function showTotalPrice(sum) {
     if (sum > 0) {
@@ -96,6 +96,32 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
           {showTotalPrice(sum)}
         </tbody>
       </table>
+      <h3>Client information</h3>
+      <form onSubmit="">{order}
+        <div className="form-group">
+          <label htmlFor="">Etunimi:</label>
+          <input className="form-control" onChange={e => setFirstname(e.target.value)} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="">Sukunimi:</label>
+          <input className="form-control" onChange={e => setLastname(e.target.value)} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="">Osoite</label>
+          <input className="form-control" onChange={e => setAddress(e.target.value)} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="">Postinumero</label>
+          <input className="form-control" onChange={e => setZip(e.target.value)} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="">Postitoimipaikka</label>
+          <input className="form-control" onChange={e => setFirstname(e.target.value)} />
+        </div>
+        <div className="buttons">
+          <button className='btn btn-primary'>Order</button>
+        </div>
+      </form>
     </div>
   )
 }
