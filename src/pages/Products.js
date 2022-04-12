@@ -35,9 +35,9 @@ export default function Products({ url, addToCart }) {
   return (
     <div>
       <div>
-          <Link to={'/products/' + params.categoryId}><button>Kaikki</button></Link>
-          <Link to={'/products/' + params.categoryId + '/M/'}><button>Miehille</button></Link>
-          <Link to={'/products/' + params.categoryId + '/N/'}><button>Naisille</button></Link>
+          <Link to={'/products/' + params.categoryId + '/0/' + params.price}><button>Kaikki</button></Link>
+          <Link to={'/products/' + params.categoryId + '/M/' + params.price}><button>Miehille</button></Link>
+          <Link to={'/products/' + params.categoryId + '/N/' + params.price}><button>Naisille</button></Link>
       </div>
       <div>
       <label htmlFor="maxPrice">Max hinta:</label>
