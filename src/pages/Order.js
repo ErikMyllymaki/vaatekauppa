@@ -110,6 +110,8 @@ export default function Order({ cart, removeFromCart, updateAmount, url }) {
           {showTotalPrice(sum)}
         </tbody>
       </table>
+      {cart.length > 0 &&
+      <>
       <h3>Client information</h3>
       <form onSubmit={order}>
         <div className="form-group">
@@ -136,6 +138,8 @@ export default function Order({ cart, removeFromCart, updateAmount, url }) {
           <button className='btn btn-primary'>Order</button>
         </div>
       </form>
+      </>
+      }
     </div>
   )
 }
