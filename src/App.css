@@ -37,6 +37,10 @@ img {
  MÄÄRITYKSET EI TOIMI SIIHEN !!??
 } */
 
+.cartAmount {
+  text-decoration: none;
+}
+
 /* tuotteiden divit */
 .productDiv {
   padding-bottom: 50px;
