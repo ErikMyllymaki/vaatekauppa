@@ -32,7 +32,7 @@ export default function AddCategories({ url }) {
 
   return (
     <>
-      <form onSubmit={addCategory}>
+      <form className='container' onSubmit={addCategory}>
         <h4 className='addCategory'>Lisää kategoria</h4>
         <label htmlFor="categoryName">Kategorianimi</label>
         <input value={category} onChange={e => setCategory(e.target.value)} type="text" name="categoryName" id="categoryName"></input>
