@@ -9,6 +9,28 @@ export default function Products({ url, addToCart }) {
   const [active, setActive] = useState(false);
   const [price, setPrice] = useState(0)
   let params = useParams();
+
+    useEffect(() => {
+      let address = '';
+
+      if (params.searchPhrase === undefined) {
+        address = url + 'products/getproducts.php/' + params.categoryId;
+      } else {
+        address = url + 'products/searchproducts.php/' + params.searchPhrase;
+      }
+
+      axios.get(address)
+        .then((response) => {
+          const json = response.data;
+          if (params.searchPhrase === undefined) {
+            setCategoryName(json.category);
+            setProducts(json.products);
+          } else {
+            setCategoryName(params.searchPhrase);
+            setProducts(json);
+          }
+        })
+    })
   
      useEffect(() => {
       axios.get(url + 'products/getproducts.php/' + params.categoryId + '/' + params.gender + '/' + params.price)
