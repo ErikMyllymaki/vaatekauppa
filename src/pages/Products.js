@@ -57,9 +57,9 @@ export default function Products({ url, addToCart }) {
   return (
     <div>
       <div>
-          <Link to={'/products/' + params.categoryId}><button>Kaikki</button></Link>
-          <Link to={'/products/' + params.categoryId + '/M'}><button>Miehet</button></Link>
-          <Link to={'/products/' + params.categoryId + '/N'}><button>Naiset</button></Link>
+          <Link to={'/products/' + params.categoryId + '/0/' + params.price}><button>Kaikki</button></Link>
+          <Link to={'/products/' + params.categoryId + '/M/' + params.price}><button>Miehille</button></Link>
+          <Link to={'/products/' + params.categoryId + '/N/' + params.price}><button>Naisille</button></Link>
       </div>
       <div>
       <label htmlFor="maxPrice">Max hinta:</label>
@@ -69,7 +69,7 @@ export default function Products({ url, addToCart }) {
       <h3 className='categoryName'>{categoryName}</h3>
       <div className='row'>
       {products.map(product => (
-        <div key={product.id} className='productDiv col-md-4 col-sm-6'>
+        <div key={product.id} className={active ? 'col-12' : 'productDiv col-md-4 col-sm-6'}>
           <div>
             <img className={active ? 'product_image_bigger' : 'product_image'} src={url + 'images/' + product.image} alt="tuotekuva"/>
           </div>

@@ -27,6 +27,10 @@ img {
   padding-bottom: 20px;
 }
 
+#categoryName {
+  width: 285px;
+}
+
 /* Ota yhteyttä- ja ylläpito-sivujen otsikot */
 .contactUs, .addCategory {
   padding-bottom: 20px;
@@ -86,7 +90,8 @@ img {
 
 .container {
   text-align: center;
-  min-height: 1000px;
+  min-height: 100%;
+  padding-bottom: 200px;
 }
 
 #email,
