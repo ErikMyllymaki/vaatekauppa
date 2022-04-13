@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Order from './pages/Order';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import AddCategories from './pages/AddCategories';
@@ -59,10 +59,15 @@ function App() {
           <Route path='/Products/:categoryId/' element={<Products url={URL} addToCart={addToCart}/>}/>
           <Route path='/Products/:categoryId/:gender' element={<Products url={URL} addToCart={addToCart}/>}/>
           <Route path='/Products/:categoryId/:gender/:price' element={<Products url={URL} addToCart={addToCart}/>}/>
-          <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
+          <Route path="/order" element={<Order 
+            url={URL} 
+            cart={cart} 
+            removeFromCart={removeFromCart} 
+            updateAmount={updateAmount}/>} />
           <Route path="/AddCategories" element={<AddCategories url={URL} />} />
           <Route path='/ContactUs' element={<ContactUs url={URL}/>} />
           <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
+          <Route path="/product/:productId" element={<Products url={URL} addToCart={addToCart}/>} />
       </Routes>
       </div>
       <Footer />

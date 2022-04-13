@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Cart from './Cart';
 
 export default function Navbar({ url, cart }) {
   const [categories, setCategories] = useState([]);
   const [search, setSearch] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get(url + 'products/getcategories.php')
@@ -21,7 +23,7 @@ export default function Navbar({ url, cart }) {
   function executeSearch(e) {
     if (e.charCode === 13) {
       e.preventDefault();
-      Navigate('/search/' + search);
+      navigate('/search/' + search);
     }
   }
 
