@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Order from './pages/Order';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import AddCategories from './pages/AddCategories';
@@ -62,6 +62,7 @@ function App() {
           <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
           <Route path="/AddCategories" element={<AddCategories url={URL} />} />
           <Route path='/ContactUs' element={<ContactUs url={URL}/>} />
+          <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
       </Routes>
       </div>
       <Footer />
