@@ -14,7 +14,7 @@ export default function Products({ url, addToCart }) {
     let address = '';
 
     if (params.searchPhrase === undefined) {
-      address = url + 'products/getproducts.php/' + params.categoryId;
+      address = url + 'products/getproducts.php/' + params.categoryId + '/' + params.gender + '/' + params.price;
     } else {
       address = url + 'products/searchproducts.php/' + params.searchPhrase;
     }
@@ -32,16 +32,16 @@ export default function Products({ url, addToCart }) {
       })
   })
 
-  useEffect(() => {
-    axios.get(url + 'products/getproducts.php/' + params.categoryId + '/' + params.gender + '/' + params.price)
-      .then((response) => {
-        const json = response.data;
-        setCategoryName(json.category);
-        setProducts(json.products);
-      }).catch(error => {
-        alert(error.response === undefined ? error : error.response.data.error);
-      })
-  }, [params])
+  // useEffect(() => {
+  //   axios.get(url + 'products/getproducts.php/' + params.categoryId + '/' + params.gender + '/' + params.price)
+  //     .then((response) => {
+  //       const json = response.data;
+  //       setCategoryName(json.category);
+  //       setProducts(json.products);
+  //     }).catch(error => {
+  //       alert(error.response === undefined ? error : error.response.data.error);
+  //     })
+  // }, [params])
 
   useEffect(() => {
 
