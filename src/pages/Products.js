@@ -30,7 +30,7 @@ export default function Products({ url, addToCart }) {
           setProducts(json);
         }
       })
-  })
+  }, [params])
 
   // useEffect(() => {
   //   axios.get(url + 'products/getproducts.php/' + params.categoryId + '/' + params.gender + '/' + params.price)
