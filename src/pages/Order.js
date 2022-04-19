@@ -90,10 +90,6 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
  
   }
 
-  function showClientInfo() {
-
-  }
-
   if (!finished) {
 
   return (
