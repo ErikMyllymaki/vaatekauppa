@@ -53,19 +53,31 @@ export default function Products({ url, addToCart }) {
 
   }, [products.length])
 
+  function showSeparation() {
+    if (params.searchPhrase === undefined) {
+      return (
+        <div className='separation'>
+          <div>
+            <Link to={'/products/' + params.categoryId + '/0/' + params.price}><button>Kaikki</button></Link>
+            <Link to={'/products/' + params.categoryId + '/M/' + params.price}><button>Miehille</button></Link>
+            <Link to={'/products/' + params.categoryId + '/N/' + params.price}><button>Naisille</button></Link>
+          </div>
+          <div>
+            <label htmlFor="maxPrice">Max hinta:</label>
+            <input min={1} value={price} onChange={e => setPrice(e.target.value)} className='maxPrice' type="number" placeholder='Tuotteen maksimihinta €' />
+            <Link to={'/products/' + params.categoryId + '/' + params.gender + '/' + price}><button>Hae</button></Link>
+
+          </div>
+        </div>
+      )
+    }
+  }
+
 
   return (
     <div>
-      <div>
-        <Link to={'/products/' + params.categoryId + '/0/' + params.price}><button>Kaikki</button></Link>
-        <Link to={'/products/' + params.categoryId + '/M/' + params.price}><button>Miehille</button></Link>
-        <Link to={'/products/' + params.categoryId + '/N/' + params.price}><button>Naisille</button></Link>
-      </div>
-      <div>
-        <label htmlFor="maxPrice">Max hinta:</label>
-        <input min={1} value={price} onChange={e => setPrice(e.target.value)} className='maxPrice' type="number" placeholder='Tuotteen maksimihinta €' />
-      </div>
-      <Link to={'/products/' + params.categoryId + '/' + params.gender + '/' + price}><button>Hae</button></Link>
+      {showSeparation()}
+
       <h3 className='categoryName'>{categoryName}</h3>
       <div className='row'>
         {products.map(product => (
