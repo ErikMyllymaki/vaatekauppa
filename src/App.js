@@ -8,6 +8,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import AddCategories from './pages/AddCategories';
+import AddProducts from './pages/AddProducts';
 import ContactUs from './pages/ContactUs';
 
 
@@ -71,6 +72,7 @@ function App() {
             updateAmount={updateAmount}
             empty={empty}/>} />
           <Route path="/AddCategories" element={<AddCategories url={URL} />} />
+          <Route path="/AddProducts" element={<AddProducts url={URL} />} />
           <Route path='/ContactUs' element={<ContactUs url={URL}/>} />
           <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
           {/* <Route path="/products/:productId" element={<Products url={URL} addToCart={addToCart}/>} /> */}

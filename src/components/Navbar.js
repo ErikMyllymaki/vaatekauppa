@@ -58,6 +58,9 @@ export default function Navbar({ url, cart }) {
               <li className="nav-item">
                 <Link className='nav-link' to="/addcategories">Ylläpito</Link>
               </li>
+              <li className="nav-item">
+                <Link className='nav-link' to="/addproducts">Tuotteiden lisäys</Link>
+              </li>
               <form className="form-inline my-2 my-lg-0">
                 <input value={search}
                   onChange={(e) => setSearch(e.target.value)}
