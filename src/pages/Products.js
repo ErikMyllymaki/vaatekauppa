@@ -73,10 +73,21 @@ export default function Products({ url, addToCart }) {
     }
   }
 
+  function showPrice(price) {
+    if (price > 0) {
+      return (
+        <p>Näytetään Alle {price}€ Maksavat tuotteet</p>
+      )
+    } else {
+      return <p>Näytetään kaikenhintaiset tuotteet</p>
+    }
+  }
+
 
   return (
     <div>
       {showSeparation()}
+      {showPrice(params.price)}
 
       <h3 className='categoryName'>{categoryName}</h3>
       <div className='row'>
