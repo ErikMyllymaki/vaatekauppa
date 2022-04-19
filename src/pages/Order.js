@@ -8,7 +8,7 @@ import { createRef } from 'react';
 import axios from 'axios';
 
 
-export default function Order({ cart, removeFromCart, updateAmount, url }) {
+export default function Order({ cart, removeFromCart, updateAmount, url, empty }) {
 
 
   const [inputs, _] = useState([]);
@@ -61,7 +61,7 @@ export default function Order({ cart, removeFromCart, updateAmount, url }) {
       }
     })
     .then(() => {
-      // empty();
+      empty();
       setFinished(true);
     }).catch(error => {
       alert(error.response === undefined ? error : error.response.data.error);
