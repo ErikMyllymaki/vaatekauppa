@@ -49,6 +49,11 @@ function App() {
     localStorage.setItem('cart',JSON.stringify(modifiedCart));
   }
 
+  function empty() {
+    setCart([]);
+    localStorage.clear('cart');
+  }
+
   return (
     <>
       <Header />
@@ -63,7 +68,8 @@ function App() {
             url={URL} 
             cart={cart} 
             removeFromCart={removeFromCart} 
-            updateAmount={updateAmount}/>} />
+            updateAmount={updateAmount}
+            empty={empty}/>} />
           <Route path="/AddCategories" element={<AddCategories url={URL} />} />
           <Route path='/ContactUs' element={<ContactUs url={URL}/>} />
           <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
