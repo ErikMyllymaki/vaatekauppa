@@ -18,6 +18,7 @@ export default function Order({ cart, removeFromCart, updateAmount, url }) {
   const [address, setAddress] = useState('')
   const [zip, setZip] = useState('')
   const [city, setCity] = useState('')
+  const [active, setActive] = useState(false)
   const [finished, setFinished] = useState(false)
 
 
@@ -60,7 +61,7 @@ export default function Order({ cart, removeFromCart, updateAmount, url }) {
       }
     })
     .then(() => {
-      //empty();
+      // empty();
       setFinished(true);
     }).catch(error => {
       alert(error.response === undefined ? error : error.response.data.error);
@@ -89,6 +90,10 @@ export default function Order({ cart, removeFromCart, updateAmount, url }) {
  
   }
 
+  function showClientInfo() {
+
+  }
+
   return (
     <div>
       <h3 className=''>Ostoskori</h3>
@@ -112,8 +117,9 @@ export default function Order({ cart, removeFromCart, updateAmount, url }) {
       </table>
       {cart.length > 0 &&
       <>
-      <h3>Client information</h3>
-      <form onSubmit={order}>
+      <button onClick={() => setActive(!active)}>{active ? 'Piilota tilauslomake' : 'Tilaa'}</button>
+      <form onSubmit={order} className={active ? 'shown' : 'hidden'}>
+      <h3>Asiakastiedot</h3>
         <div className="form-group">
           <label htmlFor="">Etunimi:</label>
           <input className="form-control" onChange={e => setFirstname(e.target.value)} />
@@ -135,7 +141,7 @@ export default function Order({ cart, removeFromCart, updateAmount, url }) {
           <input className="form-control" onChange={e => setCity(e.target.value)} />
         </div>
         <div className="buttons">
-          <button className='btn btn-primary'>Order</button>
+          <button>Tilaa</button>
         </div>
       </form>
       </>
