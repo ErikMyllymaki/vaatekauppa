@@ -78,8 +78,6 @@ export default function Products({ url, addToCart }) {
       return (
         <p>Näytetään Alle {price}€ Maksavat tuotteet</p>
       )
-    } else {
-      return <p>Näytetään kaikenhintaiset tuotteet</p>
     }
   }
 
