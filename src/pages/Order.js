@@ -94,6 +94,8 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
 
   }
 
+  if (!finished) {
+
   return (
     <div>
       <h3 className=''>Ostoskori</h3>
@@ -147,5 +149,9 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
       </>
       }
     </div>
-  )
+  )} else {
+    return (
+      <h2>Kiitos tilauksestasi!</h2>
+    )
+  }
 }
