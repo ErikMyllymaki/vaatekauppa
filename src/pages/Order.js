@@ -90,9 +90,7 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
  
   }
 
-  function showClientInfo() {
-
-  }
+  if (!finished) {
 
   return (
     <div>
@@ -147,5 +145,9 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
       </>
       }
     </div>
-  )
+  )} else {
+    return (
+      <h2>Kiitos tilauksestasi!</h2>
+    )
+  }
 }
