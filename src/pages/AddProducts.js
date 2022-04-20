@@ -11,7 +11,7 @@ export default function AddProducts({ url }) {
 
 
     function addProduct(e) {
-        e.preventdefault();
+        e.preventDefault();
 
         const json = JSON.stringify({ name: product, price: price, gender: gender, category_id: category_id })
 
