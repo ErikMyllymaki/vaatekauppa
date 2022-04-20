@@ -148,7 +148,10 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
     </div>
   )} else {
     return (
-      <h2>Kiitos tilauksestasi!</h2>
+      <div>
+        <h2>Kiitos tilauksestasi!</h2>
+        <p>Tilauksesi lähetetään mahdollisimman pian!</p>
+      </div>
     )
   }
 }
