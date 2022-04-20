@@ -56,7 +56,7 @@ export default function Navbar({ url, cart }) {
                 <Link className='nav-link' to="/ContactUs">Ota yhteyttä</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link' to="/addcategories">Ylläpito</Link>
+                <Link className='nav-link' to="/maintenance">Ylläpito</Link>
               </li>
               <form className="form-inline my-2 my-lg-0">
                 <input value={search}
