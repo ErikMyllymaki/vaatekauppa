@@ -115,6 +115,7 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
       </table>
       {cart.length > 0 &&
       <>
+      <div><button onClick={() => empty()}>Tyhjennä ostoskori</button></div>
       <button onClick={() => setActive(!active)}>{active ? 'Piilota tilauslomake' : 'Tilaa'}</button>
       <form onSubmit={order} className={active ? 'shown' : 'hidden'}>
       <h3>Asiakastiedot</h3>
