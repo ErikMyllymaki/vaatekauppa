@@ -30,7 +30,7 @@ export default function Navbar({ url, cart }) {
 
   return (
     <>
-      <nav className="navbar navbar-expand-sm navbar-light">
+      <nav id='nav' className="navbar navbar-expand-sm navbar-light">
         <div className="mx-auto d-sm-flex d-block flex-sm-nowrap">
 
           <div className="navbar-collapse text-center" id="navbarsExample11">
