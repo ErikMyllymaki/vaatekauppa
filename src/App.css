@@ -7,6 +7,13 @@
   font-family: 'Manrope', sans-serif;
 }
 
+#head {
+  background-color: #FDFAF8;
+}
+
+body {
+  background-color: #FDFAF8;
+}
 
 nav {
   margin-bottom: 40px;
