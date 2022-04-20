@@ -41,8 +41,15 @@ img {
  MÄÄRITYKSET EI TOIMI SIIHEN !!??
 } */
 
+/* search-kenttä */
+.form-inline {
+  width: 160px;
+  margin: 10px;
+}
+
 .cartAmount {
   text-decoration: none;
+
 }
 
 /* tuotteiden divit */
