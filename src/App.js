@@ -8,7 +8,9 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import AddCategories from './pages/AddCategories';
+import AddProducts from './pages/AddProducts';
 import ContactUs from './pages/ContactUs';
+import Maintenance from './pages/Maintenance';
 
 
 const URL = 'http://localhost/vaatekauppa_backend/';
@@ -70,7 +72,9 @@ function App() {
             removeFromCart={removeFromCart} 
             updateAmount={updateAmount}
             empty={empty}/>} />
+          <Route path='/Maintenance' element={<Maintenance />} />
           <Route path="/AddCategories" element={<AddCategories url={URL} />} />
+          <Route path="/AddProducts" element={<AddProducts url={URL} />} />
           <Route path='/ContactUs' element={<ContactUs url={URL}/>} />
           <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
           {/* <Route path="/products/:productId" element={<Products url={URL} addToCart={addToCart}/>} /> */}

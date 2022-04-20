@@ -41,7 +41,7 @@ export default function ContactUs( {url} ) {
                 <form onSubmit={sendMessage}>
                     <label htmlFor="name">Nimi:</label><br/>
                     <input value={name} onChange={e => setName(e.target.value)} type="text" name="name" id="name" placeholder="Nimi" required /><br/>
-                    <label htmlFor="name">Sähköposti:</label><br/>
+                    <label htmlFor="email">Sähköposti:</label><br/>
                     <input value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="esimerkki@esimerkki.com" required /><br/>
                     <label htmlFor="message">Viesti:</label><br/>
                     <textarea value={message} onChange={e => setMessage(e.target.value)} name="message" rows="8" cols="30" maxLength='500' placeholder="Viestisi tähän" required/><br/>
