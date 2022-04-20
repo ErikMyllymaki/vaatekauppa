@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function AddProducts({ url }) {
@@ -8,6 +8,19 @@ export default function AddProducts({ url }) {
     const [category_id, setCategory_id] = useState('');
     const [gender, setGender] = useState('');
     const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
+
+
+
+    useEffect(() => {
+        axios.get(url + 'products/getcategories.php')
+          .then((response) => {
+            const json = response.data;
+            setCategories(json);
+          }).catch(error => {
+            alert(error.response === undefined ? error : error.response.data.error);
+          })
+      }, [])
 
 
     function addProduct(e) {
@@ -42,10 +55,17 @@ export default function AddProducts({ url }) {
                         <label htmlFor="price">Hinta:</label><br />
                         <input value={price} onChange={e => setPrice(e.target.value)} type="text" name="price" id="price"></input><br />
                     </div>
+
                     <div className='col-12 text-center'>
-                        <label htmlFor="category_id">Kategoria:</label><br />
-                        <input value={category_id} onChange={e => setCategory_id(e.target.value)} type="text" name="category_id" id="category_id"></input><br />
+                        <label htmlFor="">Kategoria:</label><br />
+                        <select onChange={e => setCategory_id(e.target.value)}>
+                            {categories.map(category => (
+                                <option value={category.id}>{category.name}</option>
+                            ))}
+                        </select>
                     </div>
+
+
                     <div className='col-12'>
                         <label htmlFor="gender">Keille?</label><br />
                         <select className="" aria-label="Default select example" onChange={e => setGender(e.target.value)} name='gender'>
