@@ -34,6 +34,7 @@ img {
   padding-bottom: 20px;
 }
 
+
 #categoryName {
   width: 285px;
 }
@@ -41,6 +42,14 @@ img {
 /* Ota yhteyttä- ja ylläpito-sivujen otsikot */
 .contactUs, .addCategory {
   padding-bottom: 20px;
+}
+
+.form-select {
+  max-width: 200px;
+}
+
+.addproduct {
+  align-items: center;
 }
 
 /* Ostoskorin teksti, kun se on tyhjä
