@@ -67,7 +67,7 @@ export default function AddProducts({ url }) {
 
 
                     <div className='col-12'>
-                        <label htmlFor="gender">Keille?</label><br />
+                        <label htmlFor="gender">Sukupuoli:</label><br />
                         <select className="" aria-label="Default select example" onChange={e => setGender(e.target.value)} name='gender'>
                             <option value='NULL'>Ei määritelty</option>
                             <option value='M'>Miehille</option>
