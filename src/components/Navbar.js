@@ -64,7 +64,7 @@ export default function Navbar({ url, cart }) {
                   onKeyPress={(e) => executeSearch(e)}
                   className="form-control mr-sm-2"
                   type="search"
-                  placeholder="Search"
+                  placeholder="Hae"
                   aria-label="Search" />
               </form>
               <li className="nav-item">
