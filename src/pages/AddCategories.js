@@ -35,7 +35,7 @@ export default function AddCategories({ url }) {
 
   return (
     <>
-      <form className='container' onSubmit={addCategory}>
+      <form className='container box' onSubmit={addCategory}>
         <h4 className='addCategory'>Lisää uusi kategoria</h4>
         <label htmlFor="categoryName">Kategorianimi</label><br/>
         <input value={category} onChange={e => setCategory(e.target.value)} type="text" name="categoryName" id="categoryName"></input><br/>
@@ -44,7 +44,7 @@ export default function AddCategories({ url }) {
     </>
   )} else {
     return (
-      <div>
+      <div className="box">
         <h4>Kategoria lisätty.</h4>
       </div>
     )

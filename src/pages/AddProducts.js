@@ -47,8 +47,8 @@ export default function AddProducts({ url }) {
 
     return (
         <>
-            <form className='container' onSubmit={addProduct}>
-                <h4 className='addProduct'>Lisää uusi Tuote</h4>
+            <form className='container box' onSubmit={addProduct}>
+                <h4 className='addProduct'>Lisää uusi tuote</h4>
                 <div className='row'>
                     <div className='col-12 text-center'>
                         <label htmlFor="productName">Nimi:</label><br />
@@ -85,7 +85,7 @@ export default function AddProducts({ url }) {
         </>
     )} else {
         return (
-          <div>
+          <div className="box">
             <h4>Tuote lisätty.</h4>
           </div>
         )
