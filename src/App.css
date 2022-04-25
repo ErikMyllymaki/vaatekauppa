@@ -76,7 +76,10 @@ img {
 
 .cartAmount {
   text-decoration: none;
+}
 
+.bi-trash3 {
+  color: #000000;
 }
 
 /* tuotteiden divit */
