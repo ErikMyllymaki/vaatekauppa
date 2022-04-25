@@ -52,16 +52,16 @@ export default function AddProducts({ url }) {
                 <div className='row'>
                     <div className='col-12 text-center'>
                         <label htmlFor="productName">Nimi:</label><br />
-                        <input value={product} onChange={e => setProduct(e.target.value)} type="text" name="productName" id="productName"></input><br />
+                        <input className="textbox" value={product} onChange={e => setProduct(e.target.value)} type="text" name="productName" id="productName"></input><br />
                     </div>
                     <div className='col-12 text-center'>
                         <label htmlFor="price">Hinta:</label><br />
-                        <input value={price} onChange={e => setPrice(e.target.value)} type="text" name="price" id="price"></input><br />
+                        <input className="textbox" value={price} onChange={e => setPrice(e.target.value)} type="text" name="price" id="price"></input><br />
                     </div>
 
                     <div className='col-12 text-center'>
                         <label htmlFor="">Kategoria:</label><br />
-                        <select onChange={e => setCategory_id(e.target.value)}>
+                        <select className="textbox" onChange={e => setCategory_id(e.target.value)}>
                             {categories.map(category => (
                                 <option value={category.id}>{category.name}</option>
                             ))}
@@ -71,7 +71,7 @@ export default function AddProducts({ url }) {
 
                     <div className='col-12'>
                         <label htmlFor="gender">Sukupuoli:</label><br />
-                        <select className="" aria-label="Default select example" onChange={e => setGender(e.target.value)} name='gender'>
+                        <select className="textbox" aria-label="Default select example" onChange={e => setGender(e.target.value)} name='gender'>
                             <option value='NULL'>Ei määritelty</option>
                             <option value='M'>Miehille</option>
                             <option value='N'>Naisille</option>

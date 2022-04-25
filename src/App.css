@@ -44,7 +44,11 @@ img {
   padding-bottom: 20px;
 }
 
-.contact {
+.addProduct, .addCategory {
+  padding: 20px;
+}
+
+.textbox {
   margin-bottom: 10px;
 }
 
@@ -57,10 +61,6 @@ img {
 
 .form-select {
   max-width: 200px;
-}
-
-.addproduct {
-  align-items: center;
 }
 
 /* Ostoskorin teksti, kun se on tyhjä
@@ -125,7 +125,7 @@ img {
 .container {
   text-align: center;
   min-height: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 85px;
 }
 
 #email,
