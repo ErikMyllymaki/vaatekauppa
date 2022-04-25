@@ -63,8 +63,8 @@ export default function Products({ url, addToCart }) {
             <Link to={'/products/' + params.categoryId + '/N/' + params.price}><button>Naisille</button></Link>
           </div>
           <div>
-            <label htmlFor="maxPrice">Max hinta:</label>
-            <input min={1} value={price} onChange={e => setPrice(e.target.value)} className='maxPrice' type="number" placeholder='Tuotteen maksimihinta €' />
+            <label htmlFor="maxPrice">Maximihinta:</label>
+            <input min={1} value={price} onChange={e => setPrice(e.target.value)} className='maxPrice' type="number" />
             <Link to={'/products/' + params.categoryId + '/' + params.gender + '/' + price}><button>Hae</button></Link>
 
           </div>

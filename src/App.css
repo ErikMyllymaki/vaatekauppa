@@ -74,12 +74,19 @@ img {
   margin: 10px;
 }
 
+/* Ostoskori-ikoni */
 .cartAmount {
   text-decoration: none;
 }
 
+/* Ostoskorin roskakori-ikoni */
 .bi-trash3 {
   color: #000000;
+}
+
+.maxPrice {
+  margin: 10px;
+  width: 65px;
 }
 
 /* tuotteiden divit */
