@@ -6,6 +6,7 @@ export default function AddCategories({ url }) {
 
   const [category, setCategory] = useState('');
   const [categories, setCategories] = useState([]);
+  const [finished, setFinished] = useState(false)
 
 
 
@@ -23,12 +24,14 @@ export default function AddCategories({ url }) {
 
         setCategories(categories => [...categories, response.data])
         console.log(json)
-        setCategory('')
+        setFinished(true);
       }).catch(error => {
         alert(error.response ? error.response.error : error)
       })
 
   }
+
+  if (!finished) {
 
   return (
     <>
@@ -39,5 +42,11 @@ export default function AddCategories({ url }) {
         <button type="submit" className="">Lisää</button>
       </form>
     </>
-  )
+  )} else {
+    return (
+      <div>
+        <h4>Kategoria lisätty.</h4>
+      </div>
+    )
+}
 }

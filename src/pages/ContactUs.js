@@ -7,6 +7,7 @@ export default function ContactUs( {url} ) {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [messages, setMessages] = useState([])
+    const [finished, setFinished] = useState(false)
 
     function sendMessage(e) {
         e.preventDefault();
@@ -25,16 +26,14 @@ export default function ContactUs( {url} ) {
             setName(messages => [...messages, response.data])
             setEmail(messages => [...messages, response.data])
             setMessage(messages => [...messages, response.data])
-            setName('')
-            setEmail('')
-            setMessage('')
+            setFinished(true);
           }).catch(error => {
             alert(error.response ? error.response.error : error)
           })
-
-        alert("Kiitos viestistäsi!");  
     }
     
+    if (!finished) {
+
     return (
             <div>
                 <h3 className="contactUs">Ota yhteyttä</h3>
@@ -48,5 +47,11 @@ export default function ContactUs( {url} ) {
                     <button type="submit">Lähetä</button>
                 </form>
             </div>
-    )
+    )} else {
+      return (
+        <div>
+          <h4>Kiitos viestistäsi!</h4>
+        </div>
+      )
+  }
 }

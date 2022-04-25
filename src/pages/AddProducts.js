@@ -9,6 +9,7 @@ export default function AddProducts({ url }) {
     const [gender, setGender] = useState('');
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
+    const [finished, setFinished] = useState(false)
 
 
 
@@ -35,12 +36,14 @@ export default function AddProducts({ url }) {
         }).then((response) => {
             const updatedProducts = [...products, response.data]
             setProducts(updatedProducts)
+            setFinished(true);
         }).catch(error => {
             alert(error.response === undefined ? error : error.response.data.error);
         })
     }
 
 
+    if (!finished) {
 
     return (
         <>
@@ -80,5 +83,11 @@ export default function AddProducts({ url }) {
 
             </form>
         </>
-    )
+    )} else {
+        return (
+          <div>
+            <h4>Tuote lisätty.</h4>
+          </div>
+        )
+    }
 }
