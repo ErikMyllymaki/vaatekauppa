@@ -196,6 +196,13 @@ button:hover {
   background-color: rgb(247, 247, 247);
 }
 
+@media screen and (max-width: 1200px) {
+
+  .product_image {
+    width: 90%;
+  }
+
+}
 
 @media screen and (max-width: 992px) {
 
