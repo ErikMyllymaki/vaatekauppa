@@ -53,11 +53,11 @@ export default function AddProducts({ url }) {
                 <div className='row'>
                     <div className='col-12 text-center'>
                         <label htmlFor="productName">Nimi:</label><br />
-                        <input className="textbox" value={product} onChange={e => setProduct(e.target.value)} type="text" name="productName" id="productName"></input><br />
+                        <input className="textbox" value={product} onChange={e => setProduct(e.target.value)} type="text" name="productName" id="productName" required></input><br />
                     </div>
                     <div className='col-12 text-center'>
                         <label htmlFor="price">Hinta:</label><br />
-                        <input className="textbox" value={price} onChange={e => setPrice(e.target.value)} type="text" name="price" id="price"></input><br />
+                        <input className="textbox" value={price} onChange={e => setPrice(e.target.value)} type="text" name="price" id="price" required></input><br />
                     </div>
 
                     <div className='col-12 text-center'>

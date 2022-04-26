@@ -122,24 +122,24 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
       <form onSubmit={order} className={active ? 'shown' : 'hidden'}>
       <h3>Asiakastiedot</h3>
         <div className="form-group">
-          <label htmlFor="">Etunimi:</label>
-          <input className="form-control" onChange={e => setFirstname(e.target.value)} />
+          <label htmlFor="">Etunimi*</label>
+          <input className="form-control" onChange={e => setFirstname(e.target.value)} required/>
         </div>
         <div className="form-group">
-          <label htmlFor="">Sukunimi:</label>
-          <input className="form-control" onChange={e => setLastname(e.target.value)} />
+          <label htmlFor="">Sukunimi*</label>
+          <input className="form-control" onChange={e => setLastname(e.target.value)} required/>
         </div>
         <div className="form-group">
-          <label htmlFor="">Osoite</label>
-          <input className="form-control" onChange={e => setAddress(e.target.value)} />
+          <label htmlFor="">Osoite*</label>
+          <input className="form-control" onChange={e => setAddress(e.target.value)} required/>
         </div>
         <div className="form-group">
-          <label htmlFor="">Postinumero</label>
-          <input className="form-control" onChange={e => setZip(e.target.value)} />
+          <label htmlFor="">Postinumero*</label>
+          <input className="form-control" onChange={e => setZip(e.target.value)} required/>
         </div>
         <div className="form-group">
-          <label htmlFor="">Postitoimipaikka</label>
-          <input className="form-control" onChange={e => setCity(e.target.value)} />
+          <label htmlFor="">Postitoimipaikka*</label>
+          <input className="form-control" onChange={e => setCity(e.target.value)} required/>
         </div>
         <div className="buttons addtocart">
           <button className='addtocart'>Tilaa</button>
