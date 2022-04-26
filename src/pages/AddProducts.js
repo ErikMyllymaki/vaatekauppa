@@ -48,7 +48,7 @@ export default function AddProducts({ url }) {
 
     return (
         <>
-            <form className='container box' onSubmit={addProduct}>
+            <form className='box' onSubmit={addProduct}>
                 <h4 className='addProduct'>Lisää uusi tuote</h4>
                 <div className='row'>
                     <div className='col-12 text-center'>
