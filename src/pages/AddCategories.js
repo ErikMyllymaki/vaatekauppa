@@ -6,6 +6,7 @@ export default function AddCategories({ url }) {
 
   const [category, setCategory] = useState('');
   const [categories, setCategories] = useState([]);
+  const [finished, setFinished] = useState(false)
 
 
 
@@ -23,21 +24,29 @@ export default function AddCategories({ url }) {
 
         setCategories(categories => [...categories, response.data])
         console.log(json)
-        setCategory('')
+        setFinished(true);
       }).catch(error => {
         alert(error.response ? error.response.error : error)
       })
 
   }
 
+  if (!finished) {
+
   return (
     <>
-      <form className='container' onSubmit={addCategory}>
+      <form className='box' onSubmit={addCategory}>
         <h4 className='addCategory'>Lisää uusi kategoria</h4>
-        <label htmlFor="categoryName">Kategorianimi</label><br/>
-        <input value={category} onChange={e => setCategory(e.target.value)} type="text" name="categoryName" id="categoryName"></input><br/>
+        <label className="textbox" htmlFor="categoryName">Kategorian nimi:</label><br/>
+        <input className="textbox" value={category} onChange={e => setCategory(e.target.value)} type="text" name="categoryName" id="categoryName" required></input><br/>
         <button type="submit" className="">Lisää</button>
       </form>
     </>
-  )
+  )} else {
+    return (
+      <div className="box">
+        <h4>Kategoria lisätty.</h4>
+      </div>
+    )
+}
 }

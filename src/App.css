@@ -1,3 +1,4 @@
+/* Yleiset */
 * {
   /*font-family: 'Cardo', serif;*/
   /*font-family: 'Lora', serif;*/
@@ -7,55 +8,42 @@
   font-family: 'Manrope', sans-serif;
 }
 
-#head, #nav {
-  background-color: #F2F0EE;
-}
-
 body {
   background-color: #FDFAF8;
+}
+
+.container {
+  text-align: center;
+  min-height: 100vh;
+  padding-bottom: 85px;
+}
+
+button {
+  background-color: white;
+  border: 1px solid black;
+  padding: 6px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: rgb(247, 247, 247);
+}
+
+
+/*Header, nav*/
+#head, #nav {
+  background-color: #F2F0EE;
 }
 
 nav {
   margin-bottom: 40px;
 }
 
-img {
-  padding: 4px;
+.header {
+  background-color: #fff;
+  padding: 30px 30px 5px 30px;
+  text-align: center;
 }
-
-.container_img {
-  position: relative;
-  width: 100%;
-}
-
-/*Tuoteryhmien otsikot */
-.categoryName {
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-
-
-#categoryName {
-  width: 285px;
-}
-
-/* Ota yhteyttä- ja ylläpito-sivujen otsikot */
-.contactUs, .addCategory {
-  padding-bottom: 20px;
-}
-
-.form-select {
-  max-width: 200px;
-}
-
-.addproduct {
-  align-items: center;
-}
-
-/* Ostoskorin teksti, kun se on tyhjä
-.emptyCartText {
- MÄÄRITYKSET EI TOIMI SIIHEN !!??
-} */
 
 /* search-kenttä */
 .form-inline {
@@ -63,24 +51,11 @@ img {
   margin: 10px;
 }
 
-.cartAmount {
-  text-decoration: none;
 
-}
-
-/* tuotteiden divit */
-.productDiv {
-  padding-bottom: 50px;
-  /*display: inline-block;*/
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
+/*Etusivu*/
+.welcome {
+  font-size: 2em;
+  font-family: 'Lora', serif;
 }
 
 .middle {
@@ -92,6 +67,21 @@ img {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.container_img {
+  position: relative;
+  width: 100%;
+  padding: 4px;
 }
 
 .container_img:hover .image {
@@ -111,41 +101,25 @@ img {
   padding: 16px 32px;
 }
 
-.container {
-  text-align: center;
-  min-height: 100%;
-  padding-bottom: 200px;
+
+/*Tuotteet*/
+.categoryName {
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
-#email,
-#name {
-  width: 285px;
+.maxPrice {
+  margin: 10px;
+  width: 65px;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: #F2F0EE;
-  color: #000000;
-  padding: 20px;
-  margin-top: 30px;
+.productDiv {
+  padding-bottom: 50px;
+  /* display: inline-block; */
 }
 
-.welcome {
-  font-size: 2em;
-  font-family: 'Lora', serif;
-}
-
-.header {
-  background-color: #fff;
-  padding: 30px 30px 5px 30px;
-  text-align: center;
+.addtocart {
+ margin-bottom: 20px;
 }
 
 .product_image {
@@ -164,24 +138,78 @@ footer {
   display: auto;
 }
 
-button {
-  background-color: white;
-  border: 1px solid black;
-  padding: 6px;
-  margin: 5px;
+
+/*Ota yhteyttä ja ylläpito*/
+#categoryName {
+  width: 285px;
 }
 
-button:hover {
-  background-color: rgb(247, 247, 247);
+.contactUs, .addCategory {
+  padding-bottom: 20px;
 }
 
+.addProduct, .addCategory {
+  padding: 20px;
+}
+
+.textbox {
+  margin-bottom: 10px;
+}
+
+.box {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #F2F0EE;
+}
+
+#email,
+#name {
+  width: 285px;
+}
+
+
+/* Ostoskori */
+.cartAmount {
+  text-decoration: none;
+}
+
+.bi-trash3 {
+  color: #000000;
+}
+
+
+/*Footer*/
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #F2F0EE;
+  color: #000000;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+  .product_image {
+    width: 90%;
+  }
+
+}
 
 @media screen and (max-width: 992px) {
 
   .container_img {
     width: 100%
   }
-
 
   .welcome {
     margin-top: 3em;
@@ -197,19 +225,20 @@ button:hover {
     margin-bottom: 50%;
   }
 
-
 }
-
 
 @media screen and (max-width: 450px) {
 
   .product_image_bigger {
     width: 100%;
   }
+
 }
 
 @media screen and (max-width: 300px) {
+
   .welcome {
     font-size: 1.5em;
   }
+
 }
