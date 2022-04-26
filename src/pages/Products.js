@@ -93,7 +93,7 @@ export default function Products({ url, addToCart }) {
             </div>
             {product.name}&nbsp;
             {product.price} €<br />
-            <button className='' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
+            <button className='addtocart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
             <Link to={'/products/' + product.category_id + '/' + product.id}>
               <button className={active ? 'hidden' : 'shown'} type='button' onClick={() => setActive(!active)}>Näytä</button>
             </Link>
