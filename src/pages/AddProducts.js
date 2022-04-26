@@ -18,6 +18,7 @@ export default function AddProducts({ url }) {
           .then((response) => {
             const json = response.data;
             setCategories(json);
+            setCategory_id(json[0].id)
           }).catch(error => {
             alert(error.response === undefined ? error : error.response.data.error);
           })
@@ -61,9 +62,10 @@ export default function AddProducts({ url }) {
 
                     <div className='col-12 text-center'>
                         <label htmlFor="">Kategoria:</label><br />
-                        <select className="textbox" onChange={e => setCategory_id(e.target.value)}>
+                        <select className="textbox" onChange={e => setCategory_id(e.target.value)} value={category_id}>
+                            {/* <option value="">Valitse...</option> */}
                             {categories.map(category => (
-                                <option value={category.id}>{category.name}</option>
+                                <option key={category.id} value={category.id}>{category.name}</option>
                             ))}
                         </select>
                     </div>
