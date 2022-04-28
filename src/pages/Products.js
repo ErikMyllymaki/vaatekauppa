@@ -7,7 +7,8 @@ export default function Products({ url, addToCart }) {
   const [categoryName, setCategoryName] = useState('');
   const [products, setProducts] = useState([]);
   const [active, setActive] = useState(false);
-  const [price, setPrice] = useState(0)
+  const [price, setPrice] = useState(0);
+  const [sizes, setSizes] = useState([]);
   let params = useParams();
 
   useEffect(() => {
@@ -42,6 +43,16 @@ export default function Products({ url, addToCart }) {
     }
 
   }, [products.length])
+
+  useEffect(() => {
+    axios.get(url + 'products/getsizes.php')
+      .then((response) => {
+        const json = response.data;
+        setSizes(json);
+      }).catch(error => {
+        alert(error.response === undefined ? error : error.response.data.error);
+      })
+  }, [])
 
   function showSeparation() {
     if (params.searchPhrase === undefined) {
@@ -93,6 +104,10 @@ export default function Products({ url, addToCart }) {
             </div>
             {product.name}&nbsp;
             {product.price} €<br />
+            <select className="textbox" value={sizes.id}>
+            {sizes.map(sizes => (
+                                <option key={sizes.id} value={sizes.id}>{sizes.size}</option>
+                            ))}</select>
             <button className='addtocart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
             <Link to={'/products/' + product.category_id + '/' + product.id}>
               <button className={active ? 'hidden' : 'shown'} type='button' onClick={() => setActive(!active)}>Näytä</button>
