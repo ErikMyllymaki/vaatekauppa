@@ -242,3 +242,19 @@ footer {
   }
 
 }
+
+
+/* tässä korjataan se että navbarin tuotteet-kohta menee liian vasemmalle*/
+@media (max-width: 575.20px) {
+
+  .navbar .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+  }
+
+  .navbar .navbar-collapse {
+      text-align: center;
+  }
+
+}
