@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <div className="row">
+    <div className="row home">
       <div className="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center">
         <p className='welcome'>Tervetuloa vaatekauppaan!</p>
       </div>
