@@ -22,13 +22,14 @@ body {
   height: 37px;
   border: 1px solid rgb(164, 162, 152);
   padding-bottom: 1px;
+  padding-left: 3px;
+  padding-right: 1px;
   margin: 5px;
 }
 
 .maxPrice {
   height: 37px;
   border: 1px solid rgb(164, 162, 152);
-  margin: 5px;
   padding-left: 5px;
 }
 
@@ -36,6 +37,8 @@ button {
   background-color: white;
   border: 1px solid rgb(164, 162, 152);
   padding: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 5px;
 }
 
