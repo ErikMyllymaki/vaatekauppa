@@ -90,6 +90,16 @@ export default function Products({ url, addToCart }) {
     }
   }
 
+  function showSizes() {
+    if (params.categoryId != 4) {
+      return (
+        <select className="textbox" value={sizes.id}>
+            {sizes.map(sizes => (
+                                <option key={sizes.id} value={sizes.id}>{sizes.size}</option>
+                            ))}</select>
+      )
+    }
+  }
 
   return (
     <div>
@@ -106,10 +116,7 @@ export default function Products({ url, addToCart }) {
             </div>
             {product.name}&nbsp;
             {product.price} €<br />
-            <select className="textbox" value={sizes.id}>
-            {sizes.map(sizes => (
-                                <option key={sizes.id} value={sizes.id}>{sizes.size}</option>
-                            ))}</select>
+            {showSizes()}
             <button className='addtocart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
             <Link to={'/products/' + product.category_id + '/' + product.id}>
               <button className={active ? 'hidden' : 'shown'} type='button' onClick={() => setActive(!active)}>Näytä</button>
