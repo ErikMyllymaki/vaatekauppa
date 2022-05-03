@@ -23,7 +23,6 @@ export default function AddCategories({ url }) {
 
 
         setCategories(categories => [...categories, response.data])
-        console.log(json)
         setFinished(true);
       }).catch(error => {
         alert(error.response ? error.response.error : error)

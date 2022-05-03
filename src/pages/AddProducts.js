@@ -63,7 +63,6 @@ export default function AddProducts({ url }) {
                     <div className='col-12 text-center'>
                         <label htmlFor="">Kategoria:</label><br />
                         <select className="textbox" onChange={e => setCategory_id(e.target.value)} value={category_id}>
-                            {/* <option value="">Valitse...</option> */}
                             {categories.map(category => (
                                 <option key={category.id} value={category.id}>{category.name}</option>
                             ))}
