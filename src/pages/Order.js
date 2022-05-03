@@ -53,7 +53,6 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
       city: city,
       cart: cart,
     });
-    console.log(json.cart)
     axios.post(url + 'order/save.php',json, {
       headers: {
         'Accept': 'application/json',
