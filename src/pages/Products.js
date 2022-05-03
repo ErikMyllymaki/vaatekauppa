@@ -70,7 +70,7 @@ export default function Products({ url, addToCart }) {
       return (
         <div className='separation'>
           <div>
-            <Link to={'/products/' + params.categoryId + '/0/' + params.price}><button>Kaikki</button></Link>
+            <Link to={'/products/' + params.categoryId + '/0/'}><button>Kaikki</button></Link>
             <Link to={'/products/' + params.categoryId + '/M/' + params.price}><button>Miehille</button></Link>
             <Link to={'/products/' + params.categoryId + '/N/' + params.price}><button>Naisille</button></Link>
           </div>
@@ -81,7 +81,7 @@ export default function Products({ url, addToCart }) {
 
   function showMaxPrice(length) {
     if (params.searchPhrase === undefined) {
-      if (length > 1) {
+      if (length >= 0 && params.price != 'show') {
         return (
           <div>
             <label htmlFor="maxPrice">Maximihinta:</label>
@@ -136,7 +136,7 @@ export default function Products({ url, addToCart }) {
             {product.price} €<br />
             {showSizes()}
             <button className='addtocart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
-            <Link to={'/products/' + product.category_id + '/' + product.id}>
+            <Link to={'/products/' + product.category_id + '/' + product.id + '/show'}>
               <button className={active ? 'hidden' : 'shown'} type='button' onClick={() => setActive(!active)}>Näytä</button>
             </Link>
 
