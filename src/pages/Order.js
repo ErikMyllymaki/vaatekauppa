@@ -79,10 +79,7 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
     )} else {
       return (
       <tr>
-        <td></td>
-        <td className='emptyCartText'>Ostoskorissa ei ole tuotteita.</td>
-        <td></td>
-        <td></td>
+        <td>Ostoskorissa ei ole tuotteita.</td>
       </tr>   
        )}
     
