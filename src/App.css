@@ -73,6 +73,7 @@ nav {
 .welcome {
   font-size: 2em;
   font-family: 'Lora', serif;
+  margin-right: 60px;
 }
 
 .middle {
@@ -230,7 +231,7 @@ footer {
 
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991.5px) {
 
   .container_img {
     width: 100%
@@ -239,6 +240,7 @@ footer {
   .welcome {
     margin-top: 3em;
     margin-bottom: 3em;
+    margin-right: 0;
   }
 
 }
