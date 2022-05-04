@@ -60,7 +60,7 @@ export default function Products({ url, addToCart }) {
 
 
   function showSeparation() {
-    if (params.searchPhrase === undefined) {
+    if (params.searchPhrase === undefined && params.price != 'show') {
       return (
         <div className='separation'>
           <div>
