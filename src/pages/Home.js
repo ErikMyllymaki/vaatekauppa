@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="row home">
       <div className="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center">
-        <p className='welcome'>Tervetuloa vaatekauppaan!</p>
+        <p className='welcome'><br>Vanhat ryysyt pois päältä,</br> uudet vaatteet osta täältä!</p>
       </div>
       <div className="col-lg-6 col-md-12 col-sm-12">
         <div className='container_img'>
