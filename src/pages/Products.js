@@ -11,7 +11,7 @@ export default function Products({ url, addToCart }) {
   const [sizes, setSizes] = useState([]);
   let params = useParams();
   
-  const shoeSizes = [35, 36, 37, 38, 39, 40, 41, 42, 43];  
+  const shoeSizes = [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46];  
 
 
   useEffect(() => {
