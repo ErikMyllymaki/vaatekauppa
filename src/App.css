@@ -173,12 +173,22 @@ h5 {
 }
 
 /*Ota yhteyttä ja ylläpito*/
+
+.maintenanceHeader {
+  padding-top: 50px;
+}
+
+#maintenance {
+  padding: 100px;
+}
+
 #categoryName {
   width: 285px;
 }
 
 .contactUs, .addCategory {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  padding-top: 50px;
 }
 
 .addProduct, .addCategory {
@@ -199,6 +209,11 @@ h5 {
 #email,
 #name {
   width: 285px;
+}
+
+#sendContact {
+  margin-top: 25px;
+  margin-bottom: 70px;
 }
 
 
