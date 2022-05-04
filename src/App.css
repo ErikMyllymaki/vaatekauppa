@@ -164,6 +164,9 @@ nav {
   display: auto;
 }
 
+.navbar-nav {
+  align-items: center;
+}
 
 /*Ota yhteyttä ja ylläpito*/
 #categoryName {
@@ -245,6 +248,7 @@ footer {
     margin-bottom: 3em;
     margin-right: 0;
   }
+
 
 }
 
