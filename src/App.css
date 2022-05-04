@@ -179,7 +179,12 @@ h5 {
 }
 
 .addedText {
-  height: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  height: 60px;
+  padding-top: 10px;
+  margin-left: 400px;
+  margin-right: 400px;
   margin-top: 15px;
 }
 
