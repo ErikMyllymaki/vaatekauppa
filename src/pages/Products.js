@@ -97,12 +97,12 @@ export default function Products({ url, addToCart }) {
     if (price > 0) {
       if (params.gender === 'M') {
         return (
-          <p>Näytetään: Alle {price}€ Maksavat miesten tuotteet</p>
+          <h5>Näytetään alle <strong>{price} €</strong> maksavat miesten tuotteet</h5>
         )
       } else if (params.gender === 'N'){
-          return <p>Näytetään: Alle {price}€ Maksavat naisten tuotteet</p>
+          return <h5>Näytetään alle <strong>{price} €</strong> maksavat naisten tuotteet</h5>
       } else {
-        return <p>Näytetään: Kaikki alle {price}€ Maksavat tuotteet</p>
+        return <h5>Näytetään kaikki alle <strong>{price} €</strong> maksavat tuotteet</h5>
       }
 
     }

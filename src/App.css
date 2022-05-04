@@ -135,6 +135,10 @@ nav {
   width: 65px;
 }
 
+h5 {
+  padding-top: 20px;
+}
+
 .productNameAndPrice {
   padding: 8px;
 }
