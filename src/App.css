@@ -172,6 +172,17 @@ h5 {
   align-items: center;
 }
 
+#addedText {
+  background-color: #d9d8d6a8;
+  position: sticky;
+  top: 0;
+}
+
+.addedText {
+  height: 30px;
+  margin-top: 15px;
+}
+
 /*Ota yhteyttä ja ylläpito*/
 
 .maintenanceHeader {

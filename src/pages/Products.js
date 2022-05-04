@@ -9,6 +9,7 @@ export default function Products({ url, addToCart }) {
   const [active, setActive] = useState(false);
   const [price, setPrice] = useState(0);
   const [sizes, setSizes] = useState([]);
+  const [showText, setShowText] = useState(false)
   let params = useParams();
   
   const shoeSizes = [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46];  
@@ -120,11 +121,19 @@ export default function Products({ url, addToCart }) {
     }
   }
 
+  function showAddedText() {
+    setShowText(true);
+    setTimeout(function() {
+      setShowText(false)
+    }, 3000);
+  }
+
   return (
     <div>
       {showSeparation()}
       {showMaxPrice(products.length)}
       {showPrice(params.price)}
+      {showText ? <div id='addedText' className='addedText'>Tuote lisätty ostoskoriin</div> : <div className='addedText'></div>}
 
       <h3 className='categoryName'>{categoryName}</h3>
       <div className='row'>
@@ -138,7 +147,7 @@ export default function Products({ url, addToCart }) {
               {product.price} €<br />
             </div>
             {showSizes()}
-            <button className='addtocart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
+            <button className='addtocart' type='button' onClick={e => {addToCart(product); showAddedText();}}>Lisää ostoskoriin</button>
             <Link to={'/products/' + product.category_id + '/' + product.id + '/show'}>
               <button className={active ? 'hidden' : 'shown'} type='button' onClick={() => setActive(!active)}>Näytä</button>
             </Link>
