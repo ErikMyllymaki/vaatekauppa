@@ -134,6 +134,10 @@ nav {
   width: 65px;
 }
 
+.productNameAndPrice {
+  padding: 8px;
+}
+
 .productDiv {
   padding-bottom: 50px;
   /* display: inline-block; */

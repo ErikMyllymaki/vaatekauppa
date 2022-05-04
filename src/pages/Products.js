@@ -132,8 +132,10 @@ export default function Products({ url, addToCart }) {
             <div>
               <img className={active ? 'product_image_bigger' : 'product_image'} src={url + 'images/' + product.image} alt="tuotekuva" />
             </div>
-            {product.name}&nbsp;
-            {product.price} €<br />
+            <div className='productNameAndPrice'>
+              {product.name}&nbsp;
+              {product.price} €<br />
+            </div>
             {showSizes()}
             <button className='addtocart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
             <Link to={'/products/' + product.category_id + '/' + product.id + '/show'}>
