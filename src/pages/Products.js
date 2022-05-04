@@ -95,9 +95,16 @@ export default function Products({ url, addToCart }) {
 
   function showPrice(price) {
     if (price > 0) {
-      return (
-        <p>Näytetään Alle {price}€ Maksavat tuotteet</p>
-      )
+      if (params.gender === 'M') {
+        return (
+          <p>Näytetään: Alle {price}€ Maksavat miesten tuotteet</p>
+        )
+      } else if (params.gender === 'N'){
+          return <p>Näytetään: Alle {price}€ Maksavat naisten tuotteet</p>
+      } else {
+        return <p>Näytetään: Kaikki alle {price}€ Maksavat tuotteet</p>
+      }
+
     }
   }
 
