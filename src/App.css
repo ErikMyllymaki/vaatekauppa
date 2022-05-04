@@ -241,6 +241,14 @@ footer {
 
 }
 
+@media screen and (max-width: 1061px) {
+
+  .welcome {
+    margin-right: 20px;
+  }
+
+}
+
 @media screen and (max-width: 991.5px) {
 
   .container_img {
