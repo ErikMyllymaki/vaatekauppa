@@ -76,7 +76,7 @@ function App() {
           <Route path="/AddCategories" element={<AddCategories url={URL} />} />
           <Route path="/AddProducts" element={<AddProducts url={URL} />} />
           <Route path='/ContactUs' element={<ContactUs url={URL}/>} />
-          <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
+          <Route path="/search/:searchPhrase" element={<Products url={URL} addToCart={addToCart}/>} />
       </Routes>
       </div>
       <Footer />
