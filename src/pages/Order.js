@@ -93,7 +93,7 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
 
   return (
     <div>
-      <h3 className=''>Ostoskori</h3>
+      <h3 className='cartHeader'>Ostoskori</h3>
       <table className='table'>
         <tbody>
           {cart.map((product, index) => {

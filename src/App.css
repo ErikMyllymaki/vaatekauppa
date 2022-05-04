@@ -203,6 +203,11 @@ h5 {
 
 
 /* Ostoskori */
+
+.cartHeader {
+  padding-top: 40px;
+}
+
 .cartAmount {
   text-decoration: none;
 }
@@ -212,7 +217,7 @@ h5 {
 }
 
 .clearCart {
-  padding-top: 40px;
+  padding-top: 50px;
 }
 
 
