@@ -9,8 +9,10 @@ export default function Products({ url, addToCart }) {
   const [active, setActive] = useState(false);
   const [price, setPrice] = useState(0);
   const [sizes, setSizes] = useState([]);
-  const [shoeSizes, setShoeSizes] = useState([]);
   let params = useParams();
+  
+  const shoeSizes = [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46];  
+
 
   useEffect(() => {
     let address = '';
@@ -55,15 +57,7 @@ export default function Products({ url, addToCart }) {
       })
   }, [])
 
-  useEffect(() => {
-    axios.get(url + 'products/getshoesizes.php')
-      .then((response) => {
-        const json = response.data;
-        setShoeSizes(json);
-      }).catch(error => {
-        alert(error.response === undefined ? error : error.response.data.error);
-      })
-  }, [])
+
 
   function showSeparation() {
     if (params.searchPhrase === undefined) {
@@ -118,9 +112,9 @@ export default function Products({ url, addToCart }) {
       )
     } else if (params.categoryId == 3) {
       return (
-      <select className="textbox" value={shoeSizes.id}>
-            {shoeSizes.map(shoesizes => (
-              <option key={shoesizes.id} value={shoesizes.id}>{shoesizes.size}</option>
+      <select className="textbox" >
+        {shoeSizes.map(size => (
+          <option >{size}</option>
         ))}</select>
       )
     }
