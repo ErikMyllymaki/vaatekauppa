@@ -126,8 +126,7 @@ nav {
 
 /*Tuotteet*/
 .categoryName {
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .maxPrice {
@@ -158,6 +157,11 @@ h5 {
 
 .product_image_bigger {
   width: 500px;
+  padding-bottom: 20px;
+}
+
+.addtocart {
+  margin-bottom: 40px;
 }
 
 .hidden {
