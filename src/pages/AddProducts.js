@@ -79,7 +79,7 @@ export default function AddProducts({ url }) {
                         </select>
                     </div>
                 </div>
-                <button type="submit" className="">Lisää</button>
+                <button type="submit" className="addProductButton">Lisää</button>
 
 
             </form>

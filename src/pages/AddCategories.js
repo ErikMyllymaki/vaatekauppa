@@ -38,7 +38,7 @@ export default function AddCategories({ url }) {
         <h4 className='addCategory'>Lisää uusi kategoria</h4>
         <label className="" htmlFor="categoryName">Kategorian nimi:</label><br/>
         <input className="textbox" value={category} onChange={e => setCategory(e.target.value)} type="text" name="categoryName" id="categoryName" required></input><br/>
-        <button type="submit" className="">Lisää</button>
+        <button type="submit" className="addCategoriaButton">Lisää</button>
       </form>
     </>
   )} else {
