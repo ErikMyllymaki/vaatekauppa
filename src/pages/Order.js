@@ -131,7 +131,7 @@ export default function Order({ cart, removeFromCart, updateAmount, url, empty }
         </div>
         <div className="form-group">
           <label htmlFor="">Postinumero*</label>
-          <input className="form-control" onChange={e => setZip(e.target.value)} required/>
+          <input type="number" className="form-control" onChange={e => setZip(e.target.value)} required/>
         </div>
         <div className="form-group">
           <label htmlFor="">Postitoimipaikka*</label>
