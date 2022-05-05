@@ -177,7 +177,7 @@ h5 {
 }
 
 #addedText {
-  background-color: #d9d8d6a8;
+  background-color: #ebe9e5c6;
   position: sticky;
   top: 0;
 }
@@ -290,6 +290,11 @@ footer {
     width: 90%;
   }
 
+  .addedText {
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+
 }
 
 @media screen and (max-width: 1061px) {
@@ -310,6 +315,11 @@ footer {
     margin-top: 3em;
     margin-bottom: 3em;
     margin-right: 0;
+  }
+
+  .addedText {
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
